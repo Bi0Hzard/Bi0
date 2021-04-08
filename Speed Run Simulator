@@ -1,0 +1,354 @@
+--https://www.roblox.com/games/5293755937/Speed-Run-Simulator
+
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/jyG6hWez", true))()
+ 
+local GUI = library:CreateWindow({text='Speed Run Simulator 🏃‍♂️'})
+local EggsX1 = library:CreateWindow({text='Buy 🥚 Egg'})
+local TP = library:CreateWindow({text='Teleport 💨'})
+
+--  ANTI AFK
+ 
+local VirtualUser=game:service'VirtualUser'
+        game:GetService("Players").LocalPlayer.Idled:connect(function()
+            VirtualUser:CaptureController()
+            VirtualUser:ClickButton2(Vector2.new())
+end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GUI<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+GUI:AddToggle("Auto Clicker", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.click = true 
+        while wait(0) and _G.click do
+game:GetService("ReplicatedStorage").Remotes.AddSpeed:FireServer()
+
+end
+
+    else
+        _G.click = false
+    end
+end)
+
+GUI:AddToggle("Auto Rebirth", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.reb = true 
+        while wait(0) and _G.reb do
+game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer()
+
+end
+
+    else
+        _G.reb = false
+    end
+end)
+
+GUI:AddButton("Speed Boost [Press R]", function() --you dont need "arg" for a button
+local walkspeedplayer = game:GetService("Players").LocalPlayer
+local walkspeedmouse = walkspeedplayer:GetMouse()
+ 
+local walkspeedenabled = false
+ 
+function x_walkspeed(key)
+	if (key == "r") then
+		if walkspeedenabled == false then
+			_G.WS = 150;
+			local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+			Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+				Humanoid.WalkSpeed = _G.WS;
+			end)
+			Humanoid.WalkSpeed = _G.WS;
+ 
+			walkspeedenabled = true
+		elseif walkspeedenabled == true then
+			_G.WS = 20;
+			local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+			Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+				Humanoid.WalkSpeed = _G.WS;
+			end)
+			Humanoid.WalkSpeed = _G.WS;
+ 
+			walkspeedenabled = false
+		end
+	end
+end
+ 
+walkspeedmouse.KeyDown:connect(x_walkspeed)
+ 
+end)
+
+GUI:AddButton("Infinity Jump", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/ujS74rsD", true))()
+end)
+ 
+GUI:AddButton("No Clip", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/bwZreMfj", true))()
+end)
+ 
+GUI:AddButton("Destroy Gui", function() --you dont need "arg" for a button
+library.gui:Destroy()
+end)
+ 
+GUI:AddLabel("Creator: ☣BioHazard☣#9086")
+ 
+pcall(function()
+           for i = 1, 1 do
+               game:GetService"StarterGui":SetCore('SendNotification', {
+               Title = "Speed Run Simulator 🏃‍♂️💨";
+               Text = "Created by ☣BioHazard☣#9086";
+               Duration = 10;
+                })
+           end
+        end)
+
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>TELEPORT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+TP:AddButton("V.I.P Area", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1359.05896, 196.958023, -1594.15686)
+end)
+
+TP:AddButton("Desert Area", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2238.17798, 196.958023, -658.937317)
+end)
+
+TP:AddButton("Ice Area", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(3164.15479, 196.958023, -676.055603)
+end)
+
+TP:AddButton("Lava Area", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(4385.5752, 196.958023, -668.894226)
+end)
+
+TP:AddButton("Haunted Area", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(5521.63525, 197.079391, -658.096008)
+end)
+
+TP:AddButton("Golden Area", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(6486.49902, 197.103195, -657.921082)
+end)
+
+TP:AddButton("Candy Area", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(7542.24219, 196.958023, -658.121094)
+end)
+
+TP:AddButton("Rocket Area", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(8721.24219, 196.958023, -658.121094)
+end)
+
+TP:AddButton("Spongebob Area", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(9936.81445, 197.103195, -658.440247)
+end)
+
+TP:AddButton("Treehouse Area", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(11074.793, 197.12793, -657.735046)
+end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>EGGS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+EggsX1:AddToggle("Auto Buy 500 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.a = true 
+        while wait(0) and _G.a do
+local args = {
+    [1] = "EggOne"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.a = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy 3K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+local args = {
+    [1] = "EggTwo"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.b = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy 5K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c = true 
+        while wait(0) and _G.c do
+local args = {
+    [1] = "EggThree"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.c = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy 15K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.d = true 
+        while wait(0) and _G.d do
+local args = {
+    [1] = "EggFour"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.d = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy 30K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f = true 
+        while wait(0) and _G.f do
+local args = {
+    [1] = "EggFive"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.f = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy 50K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e = true 
+        while wait(0) and _G.e do
+local args = {
+    [1] = "EggFive"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.e = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy 50K #2 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l = true 
+        while wait(0) and _G.l do
+local args = {
+    [1] = "EggTwelve"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.l = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy 75K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.g = true 
+        while wait(0) and _G.g do
+local args = {
+    [1] = "EggSeven"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.g = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy 115K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.h = true 
+        while wait(0) and _G.h do
+local args = {
+    [1] = "EggEight"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.h = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy 250K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j = true 
+        while wait(0) and _G.j do
+local args = {
+    [1] = "EggNine"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.j = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy 350K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.k = true 
+        while wait(0) and _G.k do
+local args = {
+    [1] = "EggTen"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.k = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy 500K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.m = true 
+        while wait(0) and _G.m do
+local args = {
+    [1] = "EggTwelve"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.m = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy 800K Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.n = true 
+        while wait(0) and _G.n do
+local args = {
+    [1] = "EggThirteen"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CanBuyEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.n = false
+    end
+end)
