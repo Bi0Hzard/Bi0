@@ -1,0 +1,1682 @@
+--https://www.roblox.com/games/3652625463/NEW-STAGES-Lifting-Simulator
+
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/jyG6hWez", true))()
+ 
+local GUI = library:CreateWindow({text='Lifting Simulator'})
+
+
+--  ANTI AFK
+ 
+local VirtualUser=game:service'VirtualUser'
+        game:GetService("Players").LocalPlayer.Idled:connect(function()
+            VirtualUser:CaptureController()
+            VirtualUser:ClickButton2(Vector2.new())
+end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GUI<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+GUI:AddToggle("Auto Clicker", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.click = true 
+        while wait(0) and _G.click do
+          local args = {
+    [1] = {
+        [1] = "GainMuscle",
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+
+    else
+        _G.click = false
+    end
+end)
+
+GUI:AddToggle("Auto Sell", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.sell = true 
+        while wait(0) and _G.sell do
+local table_1 = {
+   [1] = 'SellMuscle'
+};
+local Target = game:GetService("ReplicatedStorage").RemoteEvent;
+Target:FireServer(table_1);
+end
+
+    else
+        _G.sell = false
+    end
+end)
+
+GUI:AddToggle("Auto Buy Weights", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.buy = true 
+        while wait() and _G.buy do
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Pencil",
+        [4] = 1,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Stick",
+        [4] = 2,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Mouse",
+        [4] = 3,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Water",
+        [4] = 4,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Soccer Ball",
+        [4] = 5,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Bottle",
+        [4] = 6,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Textbook",
+        [4] = 7,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Bucket",
+        [4] = 8,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Wood",
+        [4] = 9,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Guitar",
+        [4] = 10,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Dumbbell",
+        [4] = 11,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Chair",
+        [4] = 12,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Cart",
+        [4] = 13,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "TV",
+        [4] = 14,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Bicycle",
+        [4] = 15,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Desk",
+        [4] = 16,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Bed",
+        [4] = 17,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Log",
+        [4] = 18,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Canoe",
+        [4] = 19,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Tyre",
+        [4] = 20,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Refrigerator",
+        [4] = 21,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Drum",
+        [4] = 22,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Hydrant",
+        [4] = 23,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Hydrant",
+        [4] = 24,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Motorcycle",
+        [4] = 25,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Safe",
+        [4] = 26,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Flag",
+        [4] = 27,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "ATM",
+        [4] = 28,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "RX-7",
+        [4] = 29,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "EVO",
+        [4] = 30,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "G-Class",
+        [4] = 31,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Van",
+        [4] = 32,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Tree",
+        [4] = 33,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Container",
+        [4] = 34,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Sailboat",
+        [4] = 35,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Bus",
+        [4] = 36,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Truck",
+        [4] = 37,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Windmill",
+        [4] = 38,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Jet",
+        [4] = 39,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Tank",
+        [4] = 40,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Transport Helicopter",
+        [4] = 41,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Battleship",
+        [4] = 42,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Spaceship",
+        [4] = 43,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Speaker",
+        [4] = 44,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Anchor",
+        [4] = 45,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Old House",
+        [4] = 46,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Building",
+        [4] = 47,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Toxic Tank",
+        [4] = 48,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Rocket",
+        [4] = 49,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Castle",
+        [4] = 50,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Torpedo",
+        [4] = 51,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Signal Tower",
+        [4] = 52,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Stone Altar",
+        [4] = 53,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "UFO",
+        [4] = 54,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Ancient Place",
+        [4] = 55,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Pyramid",
+        [4] = 56,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Canyon Mt.",
+        [4] = 57,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Mountain",
+        [4] = 58,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Volcano",
+        [4] = 59,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Mt. Fuji",
+        [4] = 60,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Meteorite",
+        [4] = 61,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Moon",
+        [4] = 62,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Mercury",
+        [4] = 63,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Mars",
+        [4] = 64,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Saturn",
+        [4] = 65,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Jupiter",
+        [4] = 66,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Super Saturn",
+        [4] = 67,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Sedna Bar",
+        [4] = 68,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Sun",
+        [4] = 69,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Mini Galaxy",
+        [4] = 70,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Earth Bar",
+        [4] = 71,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Black Hole",
+        [4] = 72,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Four Dimensions",
+        [4] = 73,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Sun Bar",
+        [4] = 74,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Holy Star",
+        [4] = 75,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Meteoroids Ring",
+        [4] = 76,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Meteor Bar",
+        [4] = 77,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Water Sphere",
+        [4] = 78,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Super Meteorite",
+        [4] = 79,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Cross Stars",
+        [4] = 80,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Fiery Star",
+        [4] = 81,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Super Venus",
+        [4] = 82,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Atomic Suns",
+        [4] = 83,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Lightning Cube",
+        [4] = 84,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Atmosphere",
+        [4] = 85,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Five Dimensions",
+        [4] = 86,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Space Stone",
+        [4] = 87,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Universe",
+        [4] = 88,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Mind Stone",
+        [4] = 89,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Reality Stone",
+        [4] = 90,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Soul Stone",
+        [4] = 91,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Time Stone",
+        [4] = 92,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Power Stone",
+        [4] = 93,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Cosmo Bar",
+        [4] = 94,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Galaxy Bar",
+        [4] = 95,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Income_Item",
+        [3] = "Universe Bar",
+        [4] = 96,
+    },
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+        end
+    else
+        _G.buy = false
+          
+         end
+end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GENETICS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+GUI:AddToggle("Auto Buy Genetics", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.gen = true 
+        while wait() and _G.gen do
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Bag_Item",
+        [3] = "Adult",
+        [4] = 2
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Bag_Item",
+        [3] = "Donkey",
+        [4] = 3
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Bag_Item",
+        [3] = "Horse",
+        [4] = 4
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Bag_Item",
+        [3] = "Crocodile",
+        [4] = 5
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Bag_Item",
+        [3] = "Zebra",
+        [4] = 6
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Bag_Item",
+        [3] = "Tiger",
+        [4] = 7
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Bag_Item",
+        [3] = "Lion",
+        [4] = 8
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Bag_Item",
+        [3] = "Ostrich",
+        [4] = 9
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Bag_Item",
+        [3] = "Giraffe",
+        [4] = 10
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Bag_Item",
+        [3] = "Bear",
+        [4] = 11
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Bag_Item",
+        [3] = "Rino",
+        [4] = 12
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Bag_Item",
+        [3] = "Great Shark",
+        [4] = 13
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Bag_Item",
+        [3] = "Elephant",
+        [4] = 14
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Bag_Item",
+        [3] = "T. Rex",
+        [4] = 15
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+
+    else
+        _G.gen = false
+    end
+end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>BODY ALTER<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+GUI:AddToggle("Auto Buy Body Alter", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.reb = true 
+        while wait() and _G.reb do
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth1",
+        [4] = 1
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth2",
+        [4] = 2
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth3",
+        [4] = 3
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth4",
+        [4] = 4
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth5",
+        [4] = 5
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth6",
+        [4] = 6
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth7",
+        [4] = 7
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth8",
+        [4] = 8
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth9",
+        [4] = 9
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth10",
+        [4] = 10
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth11",
+        [4] = 11
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth12",
+        [4] = 12
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth13",
+        [4] = 13
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth14",
+        [4] = 14
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth15",
+        [4] = 15
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth16",
+        [4] = 16
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth17",
+        [4] = 17
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth18",
+        [4] = 18
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = {
+        [1] = "BuyItem",
+        [2] = "Rebirth_Item",
+        [3] = "Rebirth19",
+        [4] = 19
+    }
+}
+
+game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(args))
+end
+
+    else
+        _G.reb = false
+    end
+end)
+
+GUI:AddToggle("Speed Boost [Press R]", function() --the (arg) is if the checkbox is toggled or not
+   
+local walkspeedplayer = game:GetService("Players").LocalPlayer
+local walkspeedmouse = walkspeedplayer:GetMouse()
+
+local walkspeedenabled = false
+
+function x_walkspeed(key)
+if (key == "r") then
+if walkspeedenabled == false then
+_G.WS = 100;
+local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+Humanoid.WalkSpeed = _G.WS;
+end)
+Humanoid.WalkSpeed = _G.WS;
+
+walkspeedenabled = true
+elseif walkspeedenabled == true then
+_G.WS = 20;
+local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+Humanoid.WalkSpeed = _G.WS;
+end)
+Humanoid.WalkSpeed = _G.WS;
+
+walkspeedenabled = false
+end
+end
+end
+
+walkspeedmouse.KeyDown:connect(x_walkspeed)
+
+end)
+
+GUI:AddButton("Infinity Jump", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/ujS74rsD", true))()
+end)
+ 
+GUI:AddButton("No Clip", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/bwZreMfj", true))()
+end)
+ 
+GUI:AddButton("Destroy Gui", function() --you dont need "arg" for a button
+library.gui:Destroy()
+end)
+ 
+GUI:AddLabel("Creator: ☣BioHazard☣#9086")
+ 
+pcall(function()
+           for i = 1, 1 do
+               game:GetService"StarterGui":SetCore('SendNotification', {
+               Title = "Lifting Simulator";
+               Text = "Created by ☣BioHazard☣#9086";
+               Duration = 10;
+                })
+           end
+        end)
