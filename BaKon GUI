@@ -1,0 +1,1177 @@
+--BaKon GUI
+
+local ScreenGui = Instance.new("ScreenGui")
+local OpenFrame = Instance.new("Frame")
+local OpenButton = Instance.new("TextButton")
+local MainScrollingFrame = Instance.new("ScrollingFrame")
+local Belt = Instance.new("TextButton")
+local BlueBook = Instance.new("TextButton")
+local Battary = Instance.new("TextButton")
+local Ax = Instance.new("TextButton")
+local Bear = Instance.new("TextButton")
+local BlueBox = Instance.new("TextButton")
+local BlueKey = Instance.new("TextButton")
+local BronzeTrophy = Instance.new("TextButton")
+local Chair = Instance.new("TextButton")
+local Coin = Instance.new("TextButton")
+local Crowbar = Instance.new("TextButton")
+local FireExtinguisher = Instance.new("TextButton")
+local Fish = Instance.new("TextButton")
+local FishingRod = Instance.new("TextButton")
+local GoldTrophy = Instance.new("TextButton")
+local GoldenGear = Instance.new("TextButton")
+local GreenBook = Instance.new("TextButton")
+local GreenBox = Instance.new("TextButton")
+local GreenKey = Instance.new("TextButton")
+local GreenWire = Instance.new("TextButton")
+local Hammer = Instance.new("TextButton")
+local IDCard = Instance.new("TextButton")
+local Knob = Instance.new("TextButton")
+local Ladder = Instance.new("TextButton")
+local Lever = Instance.new("TextButton")
+local LightBulb = Instance.new("TextButton")
+local Metal = Instance.new("TextButton")
+local OrangeKey = Instance.new("TextButton")
+local Padlock = Instance.new("TextButton")
+local Pickaxe = Instance.new("TextButton")
+local PinkKey = Instance.new("TextButton")
+local Plank = Instance.new("TextButton")
+local PlasmaCutter = Instance.new("TextButton")
+local PowerButton = Instance.new("TextButton")
+local PowerCord = Instance.new("TextButton")
+local PurpleKey = Instance.new("TextButton")
+local RedBook = Instance.new("TextButton")
+local RedBox = Instance.new("TextButton")
+local RedKey = Instance.new("TextButton")
+local RedWire = Instance.new("TextButton")
+local RustBuster = Instance.new("TextButton")
+local Scissors = Instance.new("TextButton")
+local Shovel = Instance.new("TextButton")
+local SilverTrophy = Instance.new("TextButton")
+local Taser = Instance.new("TextButton")
+local Teddy = Instance.new("TextButton")
+local Textbook = Instance.new("TextButton")
+local Thermite = Instance.new("TextButton")
+local ToyHammer = Instance.new("TextButton")
+local Truck = Instance.new("TextButton")
+local TruckKey = Instance.new("TextButton")
+local Truss = Instance.new("TextButton")
+local USB = Instance.new("TextButton")
+local WhiteKey = Instance.new("TextButton")
+local WhiteValve = Instance.new("TextButton")
+local Wrench = Instance.new("TextButton")
+local YellowKey = Instance.new("TextButton")
+local YellowValve = Instance.new("TextButton")
+local Tombstone = Instance.new("TextButton")
+local UtilityLabel = Instance.new("TextLabel")
+local Credits = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local Exit = Instance.new("TextButton")
+local Minimize = Instance.new("TextButton")
+local Speed = Instance.new("TextButton")
+local ESP = Instance.new("TextButton")
+
+--=======================================ANTI AFK=======================================
+
+local VirtualUser=game:service'VirtualUser'
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+	VirtualUser:CaptureController()
+	VirtualUser:ClickButton2(Vector2.new())
+end)
+
+pcall(function()
+	for i = 1, 1 do
+		game:GetService"StarterGui":SetCore('SendNotification', {
+			Title = "Bakon 🔪";
+			Text = "Created by ☣BioHazard☣#9086";
+			Duration = 10;
+		})
+	end
+end)
+
+--=======================================Properties=======================================
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = ScreenGui
+OpenFrame.Active = true
+OpenFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+OpenFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenFrame.Position = UDim2.new(0.9045, 0, 0.472, 0)
+OpenFrame.Size = UDim2.new(0, 124, 0, 35)
+OpenFrame.Selectable = true
+
+OpenButton.Name = "OpenButton"
+OpenButton.Parent = OpenFrame
+OpenButton.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+OpenButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenButton.BorderSizePixel = 0
+OpenButton.Position = UDim2.new(0.0582524277, 0, 0.155000091, 0)
+OpenButton.Size = UDim2.new(0, 110, 0, 26)
+OpenButton.Font = Enum.Font.SourceSans
+OpenButton.Text = "Open"
+OpenButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenButton.TextSize = 14.000
+OpenButton.MouseButton1Down:connect(function()
+	Sound22()
+	MainScrollingFrame.Visible = true
+	Frame.Visible = true	
+	OpenFrame.Visible = false
+end)
+
+MainScrollingFrame.Name = "MainScrollingFrame"
+MainScrollingFrame.Parent = ScreenGui
+MainScrollingFrame.Active = true
+MainScrollingFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MainScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainScrollingFrame.BorderSizePixel = 3
+MainScrollingFrame.Position = UDim2.new(0.906, 0, 0.14, 0)
+MainScrollingFrame.Size = UDim2.new(0, 120, 0, 550)
+MainScrollingFrame.ScrollBarThickness = 10
+MainScrollingFrame.Visible = false
+MainScrollingFrame.Draggable = true
+
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Position = UDim2.new(0.9045, 0, 0.1, 0)
+Frame.Size = UDim2.new(0, 124, 0, 30)
+Frame.Visible = false
+Frame.Draggable = true
+
+Ax.Name = "Ax"
+Ax.Parent = MainScrollingFrame
+Ax.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Ax.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Ax.Position = UDim2.new(0, 0, 0.0196078438, 0)
+Ax.Size = UDim2.new(0, 112, 0, 15)
+Ax.Font = Enum.Font.SourceSans
+Ax.Text = "Ax 🪓"
+Ax.TextColor3 = Color3.fromRGB(125, 125, 125)
+Ax.TextSize = 14.000
+Ax.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Ax.TextWrapped = true
+Ax.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Ax"].Bounds.PickUp)
+end)
+
+
+Battary.Name = "Battery"
+Battary.Parent = MainScrollingFrame
+Battary.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Battary.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Battary.Position = UDim2.new(0, 0, 0.0343137272, 0)
+Battary.Size = UDim2.new(0, 112, 0, 15)
+Battary.Font = Enum.Font.SourceSans
+Battary.Text = "Battery 🔋"
+Battary.TextColor3 = Color3.fromRGB(125, 125, 125)
+Battary.TextSize = 14.000
+Battary.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Battary.TextWrapped = true
+Battary.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Battery"].Bounds.PickUp)
+end)
+
+Bear.Name = "Bear"
+Bear.Parent = MainScrollingFrame
+Bear.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Bear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bear.Position = UDim2.new(0, 0, 0.0480392165, 0)
+Bear.Size = UDim2.new(0, 112, 0, 15)
+Bear.Font = Enum.Font.SourceSans
+Bear.Text = "Bear 🐻"
+Bear.TextColor3 = Color3.fromRGB(125, 125, 125)
+Bear.TextSize = 14.000
+Bear.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Bear.TextWrapped = true
+Bear.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Bear"].Bounds.PickUp)
+end)
+
+Belt.Name = "Belt"
+Belt.Parent = MainScrollingFrame
+Belt.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Belt.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Belt.Position = UDim2.new(0, 0, 0.0627451017, 0)
+Belt.Size = UDim2.new(0, 112, 0, 15)
+Belt.Font = Enum.Font.SourceSans
+Belt.Text = "Belt"
+Belt.TextColor3 = Color3.fromRGB(125, 125, 125)
+Belt.TextSize = 14.000
+Belt.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Belt.TextWrapped = true
+Belt.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Belt"].Bounds.PickUp)
+end)
+
+BlueBook.Name = "Blue Book"
+BlueBook.Parent = MainScrollingFrame
+BlueBook.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+BlueBook.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BlueBook.Position = UDim2.new(0, 0, 0.0774509832, 0)
+BlueBook.Size = UDim2.new(0, 112, 0, 15)
+BlueBook.Font = Enum.Font.SourceSans
+BlueBook.Text = "Blue Book 📘"
+BlueBook.TextColor3 = Color3.fromRGB(0, 255, 255)
+BlueBook.TextSize = 14.000
+BlueBook.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+BlueBook.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Blue Book"].Bounds.PickUp)
+end)
+
+BlueBox.Name = "Blue Box"
+BlueBox.Parent = MainScrollingFrame
+BlueBox.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+BlueBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BlueBox.Position = UDim2.new(0, 0, 0.0921568647, 0)
+BlueBox.Size = UDim2.new(0, 112, 0, 15)
+BlueBox.Font = Enum.Font.SourceSans
+BlueBox.Text = "Blue Box 🟦"
+BlueBox.TextColor3 = Color3.fromRGB(0, 255, 255)
+BlueBox.TextSize = 14.000
+BlueBox.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+BlueBox.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Blue Box"].Bounds.PickUp)
+end)
+
+BlueKey.Name = "Blue Key"
+BlueKey.Parent = MainScrollingFrame
+BlueKey.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+BlueKey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BlueKey.Position = UDim2.new(0, 0, 0.106862746, 0)
+BlueKey.Size = UDim2.new(0, 112, 0, 15)
+BlueKey.Font = Enum.Font.SourceSans
+BlueKey.Text = "Blue Key 🔑"
+BlueKey.TextColor3 = Color3.fromRGB(0, 255, 255)
+BlueKey.TextSize = 14.000
+BlueKey.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+BlueKey.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Blue Key"].Bounds.PickUp)
+end)
+
+BronzeTrophy.Name = "Bronze Trophy"
+BronzeTrophy.Parent = MainScrollingFrame
+BronzeTrophy.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+BronzeTrophy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BronzeTrophy.Position = UDim2.new(0, 0, 0.121568628, 0)
+BronzeTrophy.Size = UDim2.new(0, 112, 0, 15)
+BronzeTrophy.Font = Enum.Font.SourceSans
+BronzeTrophy.Text = "Bronze Trophy 🥉"
+BronzeTrophy.TextColor3 = Color3.fromRGB(125, 125, 125)
+BronzeTrophy.TextSize = 14.000
+BronzeTrophy.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+BronzeTrophy.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Bronze Trophy"].Bounds.PickUp)
+end)
+
+Chair.Name = "Chair"
+Chair.Parent = MainScrollingFrame
+Chair.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Chair.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Chair.Position = UDim2.new(0, 0, 0.136274517, 0)
+Chair.Size = UDim2.new(0, 112, 0, 15)
+Chair.Font = Enum.Font.SourceSans
+Chair.Text = "Chair 🪑"
+Chair.TextColor3 = Color3.fromRGB(125, 125, 125)
+Chair.TextSize = 14.000
+Chair.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Chair.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Chair"].Bounds.PickUp)
+end)
+
+Coin.Name = "Coin"
+Coin.Parent = MainScrollingFrame
+Coin.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Coin.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Coin.Position = UDim2.new(0, 0, 0.150980398, 0)
+Coin.Size = UDim2.new(0, 112, 0, 15)
+Coin.Font = Enum.Font.SourceSans
+Coin.Text = "Coin ©"
+Coin.TextColor3 = Color3.fromRGB(125, 125, 125)
+Coin.TextSize = 14.000
+Coin.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Coin.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Coin"].Bounds.PickUp)
+end)
+
+Crowbar.Name = "Crowbar"
+Crowbar.Parent = MainScrollingFrame
+Crowbar.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Crowbar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Crowbar.Position = UDim2.new(0, 0, 0.16568628, 0)
+Crowbar.Size = UDim2.new(0, 112, 0, 15)
+Crowbar.Font = Enum.Font.SourceSans
+Crowbar.Text = "Crowbar"
+Crowbar.TextColor3 = Color3.fromRGB(125, 125, 125)
+Crowbar.TextSize = 14.000
+Crowbar.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Crowbar.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Crowbar"].Bounds.PickUp)
+end)
+
+FireExtinguisher.Name = "Fire Extinguisher"
+FireExtinguisher.Parent = MainScrollingFrame
+FireExtinguisher.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+FireExtinguisher.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FireExtinguisher.Position = UDim2.new(0, 0, 0.180392161, 0)
+FireExtinguisher.Size = UDim2.new(0, 112, 0, 15)
+FireExtinguisher.Font = Enum.Font.SourceSans
+FireExtinguisher.Text = "Fire Extinguisher 🧯"
+FireExtinguisher.TextColor3 = Color3.fromRGB(125, 125, 125)
+FireExtinguisher.TextSize = 14.000
+FireExtinguisher.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+FireExtinguisher.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["FireExtinguisher"].Bounds.PickUp)
+end)
+
+Fish.Name = "Fish"
+Fish.Parent = MainScrollingFrame
+Fish.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Fish.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Fish.Position = UDim2.new(0, 0, 0.196078435, 0)
+Fish.Size = UDim2.new(0, 112, 0, 15)
+Fish.Font = Enum.Font.SourceSans
+Fish.Text = "Fish 🐟"
+Fish.TextColor3 = Color3.fromRGB(125, 125, 125)
+Fish.TextSize = 14.000
+Fish.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Fish.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Fish"].Bounds.PickUp)
+end)
+
+FishingRod.Name = "Fishing Rod"
+FishingRod.Parent = MainScrollingFrame
+FishingRod.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+FishingRod.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FishingRod.Position = UDim2.new(0, 0, 0.210784316, 0)
+FishingRod.Size = UDim2.new(0, 112, 0, 15)
+FishingRod.Font = Enum.Font.SourceSans
+FishingRod.Text = "Fishing Rod 🎣"
+FishingRod.TextColor3 = Color3.fromRGB(125, 125, 125)
+FishingRod.TextSize = 14.000
+FishingRod.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+FishingRod.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Rod"].Bounds.PickUp)
+end)
+
+GoldTrophy.Name = "Gold Trophy"
+GoldTrophy.Parent = MainScrollingFrame
+GoldTrophy.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+GoldTrophy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GoldTrophy.Position = UDim2.new(0, 0, 0.225490198, 0)
+GoldTrophy.Size = UDim2.new(0, 112, 0, 15)
+GoldTrophy.Font = Enum.Font.SourceSans
+GoldTrophy.Text = "Gold Trophy 🥇"
+GoldTrophy.TextColor3 = Color3.fromRGB(125, 125, 125)
+GoldTrophy.TextSize = 14.000
+GoldTrophy.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+GoldTrophy.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Gold Trophy"].Bounds.PickUp)
+end)
+
+GoldenGear.Name = "Golden Gear"
+GoldenGear.Parent = MainScrollingFrame
+GoldenGear.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+GoldenGear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GoldenGear.Position = UDim2.new(0, 0, 0.240196079, 0)
+GoldenGear.Size = UDim2.new(0, 112, 0, 15)
+GoldenGear.Font = Enum.Font.SourceSans
+GoldenGear.Text = "Golden Gear ⚙"
+GoldenGear.TextColor3 = Color3.fromRGB(125, 125, 125)
+GoldenGear.TextSize = 14.000
+GoldenGear.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+GoldenGear.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Golden Gear"].Bounds.PickUp)
+end)
+
+GreenBook.Name = "Green Book"
+GreenBook.Parent = MainScrollingFrame
+GreenBook.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+GreenBook.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GreenBook.Position = UDim2.new(0, 0, 0.254901975, 0)
+GreenBook.Size = UDim2.new(0, 112, 0, 15)
+GreenBook.Font = Enum.Font.SourceSans
+GreenBook.Text = "Green Book 📗"
+GreenBook.TextColor3 = Color3.fromRGB(85, 255, 0)
+GreenBook.TextSize = 14.000
+GreenBook.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+GreenBook.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Green Book"].Bounds.PickUp)
+end)
+
+GreenBox.Name = "Green Box"
+GreenBox.Parent = MainScrollingFrame
+GreenBox.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+GreenBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GreenBox.Position = UDim2.new(0, 0, 0.269607842, 0)
+GreenBox.Size = UDim2.new(0, 112, 0, 15)
+GreenBox.Font = Enum.Font.SourceSans
+GreenBox.Text = "Green Box 🟩"
+GreenBox.TextColor3 = Color3.fromRGB(85, 255, 0)
+GreenBox.TextSize = 14.000
+GreenBox.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+GreenBox.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Green Box"].Bounds.PickUp)
+end)
+
+GreenKey.Name = "Green Key"
+GreenKey.Parent = MainScrollingFrame
+GreenKey.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+GreenKey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GreenKey.Position = UDim2.new(0, 0, 0.284313738, 0)
+GreenKey.Size = UDim2.new(0, 112, 0, 15)
+GreenKey.Font = Enum.Font.SourceSans
+GreenKey.Text = "Green Key 🔑"
+GreenKey.TextColor3 = Color3.fromRGB(85, 255, 0)
+GreenKey.TextSize = 14.000
+GreenKey.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+GreenKey.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Green Key"].Bounds.PickUp)
+end)
+
+GreenWire.Name = "Green Wire"
+GreenWire.Parent = MainScrollingFrame
+GreenWire.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+GreenWire.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GreenWire.Position = UDim2.new(0, 0, 0.299019635, 0)
+GreenWire.Size = UDim2.new(0, 112, 0, 15)
+GreenWire.Font = Enum.Font.SourceSans
+GreenWire.Text = "Green Wire 〰"
+GreenWire.TextColor3 = Color3.fromRGB(85, 255, 0)
+GreenWire.TextSize = 14.000
+GreenWire.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+GreenWire.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Green Wire"].Bounds.PickUp)
+end)
+
+Hammer.Name = "Hammer"
+Hammer.Parent = MainScrollingFrame
+Hammer.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Hammer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Hammer.Position = UDim2.new(0, 0, 0.313725531, 0)
+Hammer.Size = UDim2.new(0, 112, 0, 15)
+Hammer.Font = Enum.Font.SourceSans
+Hammer.Text = "Hammer 🔨"
+Hammer.TextColor3 = Color3.fromRGB(125, 125, 125)
+Hammer.TextSize = 14.000
+Hammer.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Hammer.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Hammer"].Bounds.PickUp)
+end)
+
+IDCard.Name = "ID Card"
+IDCard.Parent = MainScrollingFrame
+IDCard.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+IDCard.BorderColor3 = Color3.fromRGB(0, 0, 0)
+IDCard.Position = UDim2.new(0, 0, 0.328431427, 0)
+IDCard.Size = UDim2.new(0, 112, 0, 15)
+IDCard.Font = Enum.Font.SourceSans
+IDCard.Text = "I.D. Card 💳"
+IDCard.TextColor3 = Color3.fromRGB(125, 125, 125)
+IDCard.TextSize = 14.000
+IDCard.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+IDCard.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["ID Card"].Bounds.PickUp)
+end)
+
+Knob.Name = "Knob"
+Knob.Parent = MainScrollingFrame
+Knob.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Knob.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Knob.Position = UDim2.new(0, 0, 0.343137324, 0)
+Knob.Size = UDim2.new(0, 112, 0, 15)
+Knob.Font = Enum.Font.SourceSans
+Knob.Text = "Knob"
+Knob.TextColor3 = Color3.fromRGB(125, 125, 125)
+Knob.TextSize = 14.000
+Knob.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Knob.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Knob"].Bounds.PickUp)
+end)
+
+Ladder.Name = "Ladder"
+Ladder.Parent = MainScrollingFrame
+Ladder.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Ladder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Ladder.Position = UDim2.new(0, 0, 0.35784322, 0)
+Ladder.Size = UDim2.new(0, 112, 0, 15)
+Ladder.Font = Enum.Font.SourceSans
+Ladder.Text = "Ladder"
+Ladder.TextColor3 = Color3.fromRGB(125, 125, 125)
+Ladder.TextSize = 14.000
+Ladder.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Ladder.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Ladder"].Bounds.PickUp)
+end)
+
+Lever.Name = "Lever"
+Lever.Parent = MainScrollingFrame
+Lever.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Lever.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Lever.Position = UDim2.new(0, 0, 0.372549117, 0)
+Lever.Size = UDim2.new(0, 112, 0, 15)
+Lever.Font = Enum.Font.SourceSans
+Lever.Text = "Lever"
+Lever.TextColor3 = Color3.fromRGB(125, 125, 125)
+Lever.TextSize = 14.000
+Lever.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Lever.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Lever"].Bounds.PickUp)
+end)
+
+LightBulb.Name = "Light Bulb"
+LightBulb.Parent = MainScrollingFrame
+LightBulb.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+LightBulb.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LightBulb.Position = UDim2.new(0, 0, 0.387255013, 0)
+LightBulb.Size = UDim2.new(0, 112, 0, 15)
+LightBulb.Font = Enum.Font.SourceSans
+LightBulb.Text = "Light Bulb 💡"
+LightBulb.TextColor3 = Color3.fromRGB(125, 125, 125)
+LightBulb.TextSize = 14.000
+LightBulb.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+LightBulb.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Light Bulb"].Bounds.PickUp)
+end)
+
+Metal.Name = "Metal"
+Metal.Parent = MainScrollingFrame
+Metal.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Metal.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Metal.Position = UDim2.new(0, 0, 0.401960909, 0)
+Metal.Size = UDim2.new(0, 112, 0, 15)
+Metal.Font = Enum.Font.SourceSans
+Metal.Text = "Metal"
+Metal.TextColor3 = Color3.fromRGB(125, 125, 125)
+Metal.TextSize = 14.000
+Metal.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Metal.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Metal"].Bounds.PickUp)
+end)
+
+OrangeKey.Name = "Orange Key"
+OrangeKey.Parent = MainScrollingFrame
+OrangeKey.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+OrangeKey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OrangeKey.Position = UDim2.new(0, 0, 0.416666806, 0)
+OrangeKey.Size = UDim2.new(0, 112, 0, 15)
+OrangeKey.Font = Enum.Font.SourceSans
+OrangeKey.Text = "Orange Key 🔑"
+OrangeKey.TextColor3 = Color3.fromRGB(255, 85, 0)
+OrangeKey.TextSize = 14.000
+OrangeKey.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+OrangeKey.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Orange Key"].Bounds.PickUp)
+end)
+
+Padlock.Name = "Padlock"
+Padlock.Parent = MainScrollingFrame
+Padlock.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Padlock.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Padlock.Position = UDim2.new(0, 0, 0.431372702, 0)
+Padlock.Size = UDim2.new(0, 112, 0, 15)
+Padlock.Font = Enum.Font.SourceSans
+Padlock.Text = "Padlock 🔒"
+Padlock.TextColor3 = Color3.fromRGB(125, 125, 125)
+Padlock.TextSize = 14.000
+Padlock.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Padlock.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Padlock"].Bounds.PickUp)
+end)
+
+Pickaxe.Name = "Pickaxe"
+Pickaxe.Parent = MainScrollingFrame
+Pickaxe.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Pickaxe.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Pickaxe.Position = UDim2.new(0, 0, 0.446078598, 0)
+Pickaxe.Size = UDim2.new(0, 112, 0, 15)
+Pickaxe.Font = Enum.Font.SourceSans
+Pickaxe.Text = "Pickaxe ⛏"
+Pickaxe.TextColor3 = Color3.fromRGB(125, 125, 125)
+Pickaxe.TextSize = 14.000
+Pickaxe.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Pickaxe.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Pickaxe"].Bounds.PickUp)
+end)
+
+PinkKey.Name = "Pink Key"
+PinkKey.Parent = MainScrollingFrame
+PinkKey.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+PinkKey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PinkKey.Position = UDim2.new(0, 0, 0.460784495, 0)
+PinkKey.Size = UDim2.new(0, 112, 0, 15)
+PinkKey.Font = Enum.Font.SourceSans
+PinkKey.Text = "Pink Key 🔑"
+PinkKey.TextColor3 = Color3.fromRGB(255, 0, 255)
+PinkKey.TextSize = 14.000
+PinkKey.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+PinkKey.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Pink Key"].Bounds.PickUp)
+end)
+
+Plank.Name = "Plank"
+Plank.Parent = MainScrollingFrame
+Plank.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Plank.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Plank.Position = UDim2.new(0, 0, 0.475490391, 0)
+Plank.Size = UDim2.new(0, 112, 0, 15)
+Plank.Font = Enum.Font.SourceSans
+Plank.Text = "Plank"
+Plank.TextColor3 = Color3.fromRGB(125, 125, 125)
+Plank.TextSize = 14.000
+Plank.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Plank.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Plank"].Bounds.PickUp)
+end)
+
+PlasmaCutter.Name = "Plasma Cutter"
+PlasmaCutter.Parent = MainScrollingFrame
+PlasmaCutter.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+PlasmaCutter.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PlasmaCutter.Position = UDim2.new(0, 0, 0.490196288, 0)
+PlasmaCutter.Size = UDim2.new(0, 112, 0, 15)
+PlasmaCutter.Font = Enum.Font.SourceSans
+PlasmaCutter.Text = "Plasma Cutter"
+PlasmaCutter.TextColor3 = Color3.fromRGB(125, 125, 125)
+PlasmaCutter.TextSize = 14.000
+PlasmaCutter.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+PlasmaCutter.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Plasma Cutter"].Bounds.PickUp)
+end)
+
+PowerButton.Name = "Power Button"
+PowerButton.Parent = MainScrollingFrame
+PowerButton.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+PowerButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PowerButton.Position = UDim2.new(0, 0, 0.504902184, 0)
+PowerButton.Size = UDim2.new(0, 112, 0, 15)
+PowerButton.Font = Enum.Font.SourceSans
+PowerButton.Text = "Power Button"
+PowerButton.TextColor3 = Color3.fromRGB(125, 125, 125)
+PowerButton.TextSize = 14.000
+PowerButton.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+PowerButton.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Power Button"].Bounds.PickUp)
+end)
+
+PowerCord.Name = "Power Cord"
+PowerCord.Parent = MainScrollingFrame
+PowerCord.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+PowerCord.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PowerCord.Position = UDim2.new(0, 0, 0.51960808, 0)
+PowerCord.Size = UDim2.new(0, 112, 0, 15)
+PowerCord.Font = Enum.Font.SourceSans
+PowerCord.Text = "Power Cord 🔌"
+PowerCord.TextColor3 = Color3.fromRGB(125, 125, 125)
+PowerCord.TextSize = 14.000
+PowerCord.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+PowerCord.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Power Cord"].Bounds.PickUp)
+end)
+
+PurpleKey.Name = "Purple Key"
+PurpleKey.Parent = MainScrollingFrame
+PurpleKey.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+PurpleKey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PurpleKey.Position = UDim2.new(0, 0, 0.534313977, 0)
+PurpleKey.Size = UDim2.new(0, 112, 0, 15)
+PurpleKey.Font = Enum.Font.SourceSans
+PurpleKey.Text = "Purple Key 🔑"
+PurpleKey.TextColor3 = Color3.fromRGB(85, 0, 127)
+PurpleKey.TextSize = 14.000
+PurpleKey.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+PurpleKey.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Purple Key"].Bounds.PickUp)
+end)
+
+RedBook.Name = "Red Book"
+RedBook.Parent = MainScrollingFrame
+RedBook.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+RedBook.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RedBook.Position = UDim2.new(0, 0, 0.549019873, 0)
+RedBook.Size = UDim2.new(0, 112, 0, 15)
+RedBook.Font = Enum.Font.SourceSans
+RedBook.Text = "Red Book 📕"
+RedBook.TextColor3 = Color3.fromRGB(255, 0, 0)
+RedBook.TextSize = 14.000
+RedBook.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+RedBook.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Red Book"].Bounds.PickUp)
+end)
+
+RedBox.Name = "Red Box"
+RedBox.Parent = MainScrollingFrame
+RedBox.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+RedBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RedBox.Position = UDim2.new(0, 0, 0.56372577, 0)
+RedBox.Size = UDim2.new(0, 112, 0, 15)
+RedBox.Font = Enum.Font.SourceSans
+RedBox.Text = "Red Box 🟥"
+RedBox.TextColor3 = Color3.fromRGB(255, 0, 0)
+RedBox.TextSize = 14.000
+RedBox.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+RedBox.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Red Box"].Bounds.PickUp)
+end)
+
+RedKey.Name = "Red Key"
+RedKey.Parent = MainScrollingFrame
+RedKey.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+RedKey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RedKey.Position = UDim2.new(0, 0, 0.578431666, 0)
+RedKey.Size = UDim2.new(0, 112, 0, 15)
+RedKey.Font = Enum.Font.SourceSans
+RedKey.Text = "Red Key 🔑"
+RedKey.TextColor3 = Color3.fromRGB(255, 0, 0)
+RedKey.TextSize = 14.000
+RedKey.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+RedKey.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Red Key"].Bounds.PickUp)
+end)
+
+RedWire.Name = "Red Wire"
+RedWire.Parent = MainScrollingFrame
+RedWire.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+RedWire.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RedWire.Position = UDim2.new(0, 0, 0.593137562, 0)
+RedWire.Size = UDim2.new(0, 112, 0, 15)
+RedWire.Font = Enum.Font.SourceSans
+RedWire.Text = "Red Wire 〰"
+RedWire.TextColor3 = Color3.fromRGB(255, 0, 0)
+RedWire.TextSize = 14.000
+RedWire.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+RedWire.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Red Wire"].Bounds.PickUp)
+end)
+
+RustBuster.Name = "Rust Buster"
+RustBuster.Parent = MainScrollingFrame
+RustBuster.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+RustBuster.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RustBuster.Position = UDim2.new(0, 0, 0.607843459, 0)
+RustBuster.Size = UDim2.new(0, 112, 0, 15)
+RustBuster.Font = Enum.Font.SourceSans
+RustBuster.Text = "Rust Buster 🔫"
+RustBuster.TextColor3 = Color3.fromRGB(125, 125, 125)
+RustBuster.TextSize = 14.000
+RustBuster.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+RustBuster.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Rust Buster"].Bounds.PickUp)
+end)
+
+Scissors.Name = "Scissors"
+Scissors.Parent = MainScrollingFrame
+Scissors.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Scissors.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Scissors.Position = UDim2.new(0, 0, 0.622549355, 0)
+Scissors.Size = UDim2.new(0, 112, 0, 15)
+Scissors.Font = Enum.Font.SourceSans
+Scissors.Text = "Scissors ✂"
+Scissors.TextColor3 = Color3.fromRGB(125, 125, 125)
+Scissors.TextSize = 14.000
+Scissors.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Scissors.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Scissors"].Bounds.PickUp)
+end)
+
+Shovel.Name = "Shovel"
+Shovel.Parent = MainScrollingFrame
+Shovel.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Shovel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Shovel.Position = UDim2.new(0, 0, 0.637255251, 0)
+Shovel.Size = UDim2.new(0, 112, 0, 15)
+Shovel.Font = Enum.Font.SourceSans
+Shovel.Text = "Shovel"
+Shovel.TextColor3 = Color3.fromRGB(125, 125, 125)
+Shovel.TextSize = 14.000
+Shovel.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Shovel.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Shovel"].Bounds.PickUp)
+end)
+
+SilverTrophy.Name = "Silver Trophy"
+SilverTrophy.Parent = MainScrollingFrame
+SilverTrophy.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+SilverTrophy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SilverTrophy.Position = UDim2.new(0, 0, 0.651961148, 0)
+SilverTrophy.Size = UDim2.new(0, 112, 0, 15)
+SilverTrophy.Font = Enum.Font.SourceSans
+SilverTrophy.Text = "Silver Trophy 🥈"
+SilverTrophy.TextColor3 = Color3.fromRGB(125, 125, 125)
+SilverTrophy.TextSize = 14.000
+SilverTrophy.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+SilverTrophy.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Silver Trophy"].Bounds.PickUp)
+end)
+
+
+Taser.Name = "Taser"
+Taser.Parent = MainScrollingFrame
+Taser.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Taser.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Taser.Position = UDim2.new(0, 0, 0.666667044, 0)
+Taser.Size = UDim2.new(0, 112, 0, 15)
+Taser.Font = Enum.Font.SourceSans
+Taser.Text = "Taser"
+Taser.TextColor3 = Color3.fromRGB(125, 125, 125)
+Taser.TextSize = 14.000
+Taser.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Taser.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Taser"].Bounds.PickUp)
+end)
+
+Teddy.Name = "Teddy"
+Teddy.Parent = MainScrollingFrame
+Teddy.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Teddy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Teddy.Position = UDim2.new(0, 0, 0.681372941, 0)
+Teddy.Size = UDim2.new(0, 112, 0, 15)
+Teddy.Font = Enum.Font.SourceSans
+Teddy.Text = "Teddy 🧸"
+Teddy.TextColor3 = Color3.fromRGB(125, 125, 125)
+Teddy.TextSize = 14.000
+Teddy.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Teddy.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Teddy"].Bounds.PickUp)
+end)
+
+Textbook.Name = "Textbook"
+Textbook.Parent = MainScrollingFrame
+Textbook.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Textbook.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Textbook.Position = UDim2.new(0, 0, 0.696078837, 0)
+Textbook.Size = UDim2.new(0, 112, 0, 15)
+Textbook.Font = Enum.Font.SourceSans
+Textbook.Text = "Textbook 📒"
+Textbook.TextColor3 = Color3.fromRGB(125, 125, 125)
+Textbook.TextSize = 14.000
+Textbook.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Textbook.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Textbook"].Bounds.PickUp)
+end)
+
+Thermite.Name = "Thermite"
+Thermite.Parent = MainScrollingFrame
+Thermite.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Thermite.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Thermite.Position = UDim2.new(0, 0, 0.710784733, 0)
+Thermite.Size = UDim2.new(0, 112, 0, 15)
+Thermite.Font = Enum.Font.SourceSans
+Thermite.Text = "Thermite"
+Thermite.TextColor3 = Color3.fromRGB(125, 125, 125)
+Thermite.TextSize = 14.000
+Thermite.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Thermite.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Thermite"].Bounds.PickUp)
+end)
+
+Tombstone.Name = "Tombstone"
+Tombstone.Parent = MainScrollingFrame
+Tombstone.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Tombstone.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tombstone.Position = UDim2.new(0, 0, 0.72549063, 0)
+Tombstone.Size = UDim2.new(0, 112, 0, 15)
+Tombstone.Font = Enum.Font.SourceSans
+Tombstone.Text = "Tombstone"
+Tombstone.TextColor3 = Color3.fromRGB(125, 125, 125)
+Tombstone.TextSize = 14.000
+Tombstone.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Tombstone.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Stone"].Bounds.PickUp)
+end)
+
+ToyHammer.Name = "Toy Hammer"
+ToyHammer.Parent = MainScrollingFrame
+ToyHammer.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+ToyHammer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ToyHammer.Position = UDim2.new(0, 0, 0.739216149, 0)
+ToyHammer.Size = UDim2.new(0, 112, 0, 15)
+ToyHammer.Font = Enum.Font.SourceSans
+ToyHammer.Text = "Toy Hammer"
+ToyHammer.TextColor3 = Color3.fromRGB(125, 125, 125)
+ToyHammer.TextSize = 14.000
+ToyHammer.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+ToyHammer.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Toy Hammer"].Bounds.PickUp)
+end)
+
+Truck.Name = "Truck"
+Truck.Parent = MainScrollingFrame
+Truck.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Truck.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Truck.Position = UDim2.new(0, 0, 0.753922045, 0)
+Truck.Size = UDim2.new(0, 112, 0, 15)
+Truck.Font = Enum.Font.SourceSans
+Truck.Text = "Truck 🚛"
+Truck.TextColor3 = Color3.fromRGB(125, 125, 125)
+Truck.TextSize = 14.000
+Truck.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Truck.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Truck"].Bounds.PickUp)
+end)
+
+TruckKey.Name = "Truck Key"
+TruckKey.Parent = MainScrollingFrame
+TruckKey.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+TruckKey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TruckKey.Position = UDim2.new(0, 0, 0.768627942, 0)
+TruckKey.Size = UDim2.new(0, 112, 0, 15)
+TruckKey.Font = Enum.Font.SourceSans
+TruckKey.Text = "Truck Key 🚛🔑"
+TruckKey.TextColor3 = Color3.fromRGB(0, 0, 0)
+TruckKey.TextSize = 14.000
+TruckKey.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+TruckKey.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Truck Key"].Bounds.PickUp)
+end)
+
+Truss.Name = "Truss"
+Truss.Parent = MainScrollingFrame
+Truss.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Truss.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Truss.Position = UDim2.new(0, 0, 0.783333838, 0)
+Truss.Size = UDim2.new(0, 112, 0, 15)
+Truss.Font = Enum.Font.SourceSans
+Truss.Text = "Truss"
+Truss.TextColor3 = Color3.fromRGB(125, 125, 125)
+Truss.TextSize = 14.000
+Truss.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Truss.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Truss"].Bounds.PickUp)
+end)
+
+USB.Name = "USB"
+USB.Parent = MainScrollingFrame
+USB.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+USB.BorderColor3 = Color3.fromRGB(0, 0, 0)
+USB.Position = UDim2.new(0, 0, 0.798039734, 0)
+USB.Size = UDim2.new(0, 112, 0, 15)
+USB.Font = Enum.Font.SourceSans
+USB.Text = "USB"
+USB.TextColor3 = Color3.fromRGB(125, 125, 125)
+USB.TextSize = 14.000
+USB.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+USB.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["USB"].Bounds.PickUp)
+end)
+
+WhiteKey.Name = "White Key"
+WhiteKey.Parent = MainScrollingFrame
+WhiteKey.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+WhiteKey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WhiteKey.Position = UDim2.new(0, 0, 0.812745631, 0)
+WhiteKey.Size = UDim2.new(0, 112, 0, 15)
+WhiteKey.Font = Enum.Font.SourceSans
+WhiteKey.Text = "White Key 🔑"
+WhiteKey.TextColor3 = Color3.fromRGB(255, 255, 255)
+WhiteKey.TextSize = 14.000
+WhiteKey.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+WhiteKey.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["White Key"].Bounds.PickUp)
+end)
+
+WhiteValve.Name = "White Valve"
+WhiteValve.Parent = MainScrollingFrame
+WhiteValve.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+WhiteValve.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WhiteValve.Position = UDim2.new(0, 0, 0.827451527, 0)
+WhiteValve.Size = UDim2.new(0, 112, 0, 15)
+WhiteValve.Font = Enum.Font.SourceSans
+WhiteValve.Text = "White Valve"
+WhiteValve.TextColor3 = Color3.fromRGB(255, 255, 255)
+WhiteValve.TextSize = 14.000
+WhiteValve.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+WhiteValve.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["White Valve"].Bounds.PickUp)
+end)
+
+Wrench.Name = "Wrench"
+Wrench.Parent = MainScrollingFrame
+Wrench.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Wrench.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Wrench.Position = UDim2.new(0, 0, 0.842157423, 0)
+Wrench.Size = UDim2.new(0, 112, 0, 15)
+Wrench.Font = Enum.Font.SourceSans
+Wrench.Text = "Wrench 🔧"
+Wrench.TextColor3 = Color3.fromRGB(125, 125, 125)
+Wrench.TextSize = 14.000
+Wrench.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+Wrench.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Wrench"].Bounds.PickUp)
+end)
+
+YellowKey.Name = "Yellow Key"
+YellowKey.Parent = MainScrollingFrame
+YellowKey.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+YellowKey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+YellowKey.Position = UDim2.new(0, 0, 0.85686332, 0)
+YellowKey.Size = UDim2.new(0, 112, 0, 15)
+YellowKey.Font = Enum.Font.SourceSans
+YellowKey.Text = "Yellow Key 🔑"
+YellowKey.TextColor3 = Color3.fromRGB(255, 255, 0)
+YellowKey.TextSize = 14.000
+YellowKey.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+YellowKey.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Yellow Key"].Bounds.PickUp)
+end)
+
+YellowValve.Name = "Yellow Valve"
+YellowValve.Parent = MainScrollingFrame
+YellowValve.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+YellowValve.BorderColor3 = Color3.fromRGB(0, 0, 0)
+YellowValve.Position = UDim2.new(0, 0, 0.871569216, 0)
+YellowValve.Size = UDim2.new(0, 112, 0, 15)
+YellowValve.Font = Enum.Font.SourceSans
+YellowValve.Text = "Yellow Valve"
+YellowValve.TextColor3 = Color3.fromRGB(255, 255, 0)
+YellowValve.TextSize = 14.000
+YellowValve.TextStrokeColor3 = Color3.fromRGB(255, 85, 0)
+YellowValve.MouseButton1Down:connect(function()
+	fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Yellow Valve"].Bounds.PickUp)
+end)
+
+UtilityLabel.Name = "UtilityLabel"
+UtilityLabel.Parent = MainScrollingFrame
+UtilityLabel.Active = true
+UtilityLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+UtilityLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UtilityLabel.Selectable = true
+UtilityLabel.Size = UDim2.new(0, 109, 0, 20)
+UtilityLabel.Font = Enum.Font.SourceSans
+UtilityLabel.Text = "Utilities"
+UtilityLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+UtilityLabel.TextSize = 14.000
+
+Credits.Name = "Credits"
+Credits.Parent = MainScrollingFrame
+Credits.Active = true
+Credits.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Credits.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Credits.Position = UDim2.new(0.0250000004, 0, 0.899999976, 0)
+Credits.Size = UDim2.new(0, 106, 0, 80)
+Credits.Font = Enum.Font.SourceSans
+Credits.Text = "Created by ☣BioHazard☣#9086"
+Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits.TextScaled = true
+Credits.TextSize = 10.000
+Credits.TextWrapped = true
+
+Exit.Name = "Exit"
+Exit.Parent = Frame
+Exit.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Exit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Exit.Position = UDim2.new(0.752991199, 0, 0, 0)
+Exit.Size = UDim2.new(0, 29, 0, 30)
+Exit.Font = Enum.Font.SourceSans
+Exit.Text = "❌"
+Exit.TextColor3 = Color3.fromRGB(255, 0, 0)
+Exit.TextSize = 14.000
+Exit.MouseButton1Down:connect(function()
+	Sound33()
+	ScreenGui:Destroy()
+end)
+
+function Sound33()
+	local Song2 = Instance.new("Sound")
+
+	Song2.Name = "Song2"
+	Song2.SoundId = "rbxassetid://317671259"
+	Song2.Volume = 2
+	Song2.archivable = false
+	Song2.Parent = game.Workspace
+	Song2:play()
+end
+
+Minimize.Name = "Minimize"
+Minimize.Parent = Frame
+Minimize.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Minimize.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Minimize.Position = UDim2.new(0.510629952, 0, 0, 0)
+Minimize.Size = UDim2.new(0, 29, 0, 30)
+Minimize.Font = Enum.Font.SourceSans
+Minimize.Text = "__"
+Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.TextSize = 14.000
+Minimize.MouseButton1Down:connect(function()
+	Sound22()
+	OpenFrame.Visible = true
+	MainScrollingFrame.Visible = false
+	Frame.Visible = false	
+end)
+
+function Sound22()
+	local Song1 = Instance.new("Sound")
+
+	Song1.Name = "Song1"
+	Song1.SoundId = "rbxassetid://421058925"
+	Song1.Volume = 2
+	Song1.archivable = false
+	Song1.Parent = game.Workspace
+	Song1:play()
+end
+
+Speed.Name = "Speed"
+Speed.Parent = Frame
+Speed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Speed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Speed.Position = UDim2.new(0.26087901, 0, 0, 0)
+Speed.Size = UDim2.new(0, 29, 0, 30)
+Speed.Font = Enum.Font.SourceSans
+Speed.Text = "🏃‍💨"
+Speed.TextColor3 = Color3.fromRGB(255, 0, 0)
+Speed.TextScaled = true
+Speed.TextSize = 14.000
+Speed.TextWrapped = true
+Speed.MouseButton1Down:connect(function()
+	local walkspeedplayer = game:GetService("Players").LocalPlayer
+	local walkspeedmouse = walkspeedplayer:GetMouse()
+
+	local walkspeedenabled = false
+
+	function x_walkspeed(key)
+		if (key == "r") then
+			if walkspeedenabled == false then
+				_G.WS = 18;
+				local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+				Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+					Humanoid.WalkSpeed = _G.WS;
+				end)
+				Humanoid.WalkSpeed = _G.WS;
+
+				walkspeedenabled = true
+			elseif walkspeedenabled == true then
+				_G.WS = 17;
+				local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+				Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+					Humanoid.WalkSpeed = _G.WS;
+				end)
+				Humanoid.WalkSpeed = _G.WS;
+
+				walkspeedenabled = false
+			end
+		end
+	end
+
+	walkspeedmouse.KeyDown:connect(x_walkspeed)
+
+end)
+
+ESP.Name = "ESP"
+ESP.Parent = Frame
+ESP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ESP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ESP.Position = UDim2.new(0.0161290318, 0, 0, 0)
+ESP.Size = UDim2.new(0, 29, 0, 30)
+ESP.Font = Enum.Font.SourceSans
+ESP.Text = "👀"
+ESP.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESP.TextScaled = true
+ESP.TextSize = 14.000
+ESP.TextWrapped = true
+ESP.MouseButton1Down:connect(function()
+	Sound22()
+	loadstring(game:HttpGet("https://pastebin.com/raw/HzvynH0z", true))()
+end)
