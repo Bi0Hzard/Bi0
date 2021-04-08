@@ -1,0 +1,294 @@
+--https://www.roblox.com/games/4958515691/BIG-UPDATE-Gladiator-Simulator
+
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/jyG6hWez", true))()
+
+local GUI = library:CreateWindow({text='Gladiator Simulator'})
+local Eggs = library:CreateWindow({text='Auto Buy Eggs'})
+local TP = library:CreateWindow({text='Teleport'})
+local Credits = library:CreateWindow({text='Credits'})
+
+--  ANTI AFK
+
+local VirtualUser=game:service'VirtualUser'
+        game:GetService("Players").LocalPlayer.Idled:connect(function()
+            VirtualUser:CaptureController()
+            VirtualUser:ClickButton2(Vector2.new())
+end)
+
+-- GUI
+
+GUI:AddLabel("Auto Farm Stuff")
+
+GUI:AddToggle("Auto Train Sword", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.sword = true 
+        while wait(0) and _G.sword do
+            local args = {
+    [1] = "Strength"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Train:FireServer(unpack(args))
+        end
+    else
+        _G.sword = false
+    end
+end)
+
+GUI:AddToggle("Auto Train Durability", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.dura = true 
+        while wait(0) and _G.dura do
+            local args = {
+    [1] = "Durability"
+}
+
+game:GetService("ReplicatedStorage").Remotes.Train:FireServer(unpack(args))
+        end
+    else
+        _G.dura = false
+    end
+end)
+
+GUI:AddToggle("Auto Train Power", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.fire = true 
+        while wait(0) and _G.fire do
+            game:GetService("Players").LocalPlayer.Character.Power.Fire:FireServer()
+        end
+    else
+        _G.fire = false
+    end
+end)
+
+GUI:AddToggle("Auto Rebirth", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.reb = true 
+        while wait(0) and _G.reb do
+         local A_1 = "Rebirth me plox"
+local Event = game:GetService("ReplicatedStorage").Remotes.CanRebirth
+Event:FireServer(A_1)
+        end
+    else
+        _G.reb = false
+    end
+end)
+
+GUI:AddButton("Infinity Jump", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/ujS74rsD", true))()
+end)
+
+GUI:AddButton("No Clip", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/bwZreMfj", true))()
+end)
+
+GUI:AddButton("Destroy Gui", function() --you dont need "arg" for a button
+library.gui:Destroy()
+end)
+
+GUI:AddLabel("Creator: ☣BioHazard☣#9086")
+
+pcall(function()
+           for i = 1, 1 do
+               game:GetService"StarterGui":SetCore('SendNotification', {
+               Title = "Gladiator Simulator GUI";
+               Text = "Created by ☣BioHazard☣#9086";
+               Duration = 10;
+                })
+           end
+        end)
+
+--  EGGS
+
+Eggs:AddToggle("Buy Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.d = true 
+        while wait(0) and _G.d do
+        local A_1 = 1
+local A_2 = game:GetService("Workspace").Incubators.CommonEgg.Data
+local Event = game:GetService("ReplicatedStorage").Remotes.BuyIncEgg
+Event:InvokeServer(A_1, A_2)
+
+        end
+    else
+        _G.d = false
+    end
+end)
+
+Eggs:AddToggle("Buy Uncommon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e = true 
+        while wait(0) and _G.e do
+      local A_1 = 1
+local A_2 = game:GetService("Workspace").Incubators.UncommonEgg.Data
+local Event = game:GetService("ReplicatedStorage").Remotes.BuyIncEgg
+Event:InvokeServer(A_1, A_2)
+
+        end
+    else
+        _G.e = false
+    end
+end)
+
+Eggs:AddToggle("Buy Dragon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f = true 
+        while wait(0) and _G.f do
+          local A_1 = 1
+local A_2 = game:GetService("Workspace").Incubators.DragonEgg.Data
+local Event = game:GetService("ReplicatedStorage").Remotes.BuyIncEgg
+Event:InvokeServer(A_1, A_2)
+
+        end
+    else
+        _G.f = false
+    end
+end)
+
+Eggs:AddToggle("Buy Epic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.g = true 
+        while wait(0) and _G.g do
+       local A_1 = 1
+local A_2 = game:GetService("Workspace").Incubators.EpicEgg.Data
+local Event = game:GetService("ReplicatedStorage").Remotes.BuyIncEgg
+Event:InvokeServer(A_1, A_2)
+
+        end
+    else
+        _G.g = false
+    end
+end)
+
+Eggs:AddToggle("Buy Legendary Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.h = true 
+        while wait(0) and _G.h do
+local A_1 = 1
+local A_2 = game:GetService("Workspace").Incubators.LegendaryEgg.Data
+local Event = game:GetService("ReplicatedStorage").Remotes.BuyIncEgg
+Event:InvokeServer(A_1, A_2)
+
+        end
+    else
+        _G.h = false
+    end
+end)
+
+Eggs:AddToggle("Buy New Dragon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.i = true 
+        while wait(0) and _G.i do
+local A_1 = 1
+local A_2 = game:GetService("Workspace").Incubators.NewDragonEgg.Data
+local Event = game:GetService("ReplicatedStorage").Remotes.BuyIncEgg
+Event:InvokeServer(A_1, A_2)
+
+        end
+    else
+        _G.i = false
+    end
+end)
+
+Eggs:AddToggle("Buy Ocean Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.oce = true 
+        while wait(0) and _G.oce do
+local args = {
+    [1] = 1,
+    [2] = workspace.Incubators.OceanEgg.Data
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyIncEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.oce = false
+    end
+end)
+
+Eggs:AddToggle("Buy Gladiator Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.glad = true 
+        while wait(0) and _G.glad do
+local args = {
+    [1] = 1,
+    [2] = workspace.Incubators["Gladiator Egg"].Data
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyIncEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.glad = false
+    end
+end)
+
+Eggs:AddToggle("Buy Toy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.toy = true 
+        while wait(0) and _G.toy do
+local args = {
+    [1] = 1,
+    [2] = workspace.Incubators.ToyEgg.Data
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyIncEgg:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.toy = false
+    end
+end)
+
+--  TELEPORT
+
+TP:AddButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1055.69983, 207.119461, -63.0996475)
+end)
+
+TP:AddButton("Thanos Boss", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(429.256317, 272.63562, -134.907959)
+end)
+
+TP:AddButton("Toy World", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1375.24146, 215.520645, 531.261292)
+end)
+
+TP:AddButton("Candy Rebirth Store", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(844.650574, 211.624054, 376.249359)
+end)
+
+TP:AddButton("Rebirth Store 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1086.35266, 1204.59167, -81.4014511)
+end)
+
+TP:AddButton("Sword Shop 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1064.04395, 206.861481, 29.4220142)
+end)
+
+TP:AddButton("Sword Shop 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1070.40271, 1815.15198, -38.7896919)
+end)
+
+TP:AddButton("Armour Shop 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1038.74622, 206.861435, 57.0521469)
+end)
+
+TP:AddButton("Armour Shop 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1068.35913, 1815.15198, -72.0098572)
+end)
+
+TP:AddButton("Power Shop 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1029.17334, 206.861465, 19.9937916)
+end)
+
+TP:AddButton("Island 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1085.25342, 1679.9613, -52.5887222)
+end)
+
+TP:AddButton("Island 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1048.35767, 1815.15173, -57.2621613)
+end)
+
+
+Credits:AddLabel("Credits:☣BioHazard☣#9086")
