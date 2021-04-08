@@ -8,8 +8,8 @@ local flying = false
 local deb = true 
 local ctrl = {f = 0, b = 0, l = 0, r = 0} 
 local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
-local maxspeed = 50 
-local speed = 0 
+local maxspeed = 400 
+local speed = 5000 
 
 function Fly() 
 local bg = Instance.new("BodyGyro", torso) 
@@ -44,13 +44,13 @@ bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.r
 until not flying 
 ctrl = {f = 0, b = 0, l = 0, r = 0} 
 lastctrl = {f = 0, b = 0, l = 0, r = 0} 
-speed = 0 
+speed = 100
 bg:Destroy() 
 bv:Destroy() 
 plr.Character.Humanoid.PlatformStand = false 
 end 
 mouse.KeyDown:connect(function(key) 
-if key:lower() == "e" then 
+if key:lower() == "f" then 
 if flying then flying = false 
 else 
 flying = true 
@@ -78,3 +78,6 @@ ctrl.r = 0
 end 
 end)
 Fly()
+
+          
+end)
