@@ -23,7 +23,7 @@ pcall(function()
            end
         end)
 
-Eggs:AddButton("Rusty Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+Eggs:AddButton("Complete Egg Hunt", function(arg) --the (arg) is if the checkbox is toggled or not
 local args = {
     [1] = "1"
 }
