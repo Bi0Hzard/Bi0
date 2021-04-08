@@ -1,0 +1,665 @@
+--https://www.roblox.com/games/5516928515/QUESTS-Mining-Champions
+
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/jyG6hWez", true))()
+
+local GUI = library:CreateWindow({text='Mining Champions ⛏'})
+local OreGem = library:CreateWindow({text='Ore & Gems ⛏'})
+local EggsX1 = library:CreateWindow({text='Buy 🥚 Egg'})
+local EggsX3 = library:CreateWindow({text='Buy 🥚🥚🥚 Eggs'})
+local TP = library:CreateWindow({text='Teleport 💨'})
+
+GUI:AddToggle("Auto Sell 💰", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.c = true 
+        while wait() and _G.c do
+game:GetService("ReplicatedStorage").Events.Server.RequestSell:InvokeServer()
+           end
+  else
+    
+        _G.c = false
+    end
+end)
+
+GUI:AddToggle("Auto Multi Delete All", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.cd = true 
+        while wait(0.5) and _G.cd do
+game:GetService("ReplicatedStorage").Events.Server.RequestMultiDeleteAll:InvokeServer()
+           end
+  else
+    
+        _G.cd = false
+    end
+end)
+
+GUI:AddToggle("Equip Best Coin Pets", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.d = true 
+        while wait() and _G.d do
+game:GetService("ReplicatedStorage").Events.Server.BestCoin:InvokeServer()
+           end
+  else
+    
+        _G.d = false
+    end
+end)
+
+GUI:AddToggle("Auto Equip Best Gems", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.e = true 
+        while wait() and _G.e do
+game:GetService("ReplicatedStorage").Events.Server.BestGem:InvokeServer()
+           end
+  else
+    
+        _G.e = false
+    end
+end)
+
+GUI:AddToggle("Auto Claim Quests 🧾", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.d22 = true 
+        while wait() and _G.d2 do
+
+
+local args = {
+    [1] = "Eggs",
+    [2] = "2",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "Eggs",
+    [2] = "3",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "Eggs",
+    [2] = "4",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "Eggs",
+    [2] = "5",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+local args = {
+    [1] = "Eggs",
+    [2] = "6",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+local args = {
+    [1] = "Eggs",
+    [2] = "7",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+local args = {
+    [1] = "Eggs",
+    [2] = "8",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "Eggs",
+    [2] = "9",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "Eggs",
+    [2] = "10",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+local args = {
+    [1] = "Eggs",
+    [2] = "11",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+local args = {
+    [1] = "Eggs",
+    [2] = "12",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+local args = {
+    [1] = "Eggs",
+    [2] = "13",
+}
+
+game:GetService("ReplicatedStorage").Events.Server.Quest:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.d22 = false
+    end
+end)
+
+GUI:AddButton("Infinity Jump", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/ujS74rsD", true))()
+end)
+ 
+GUI:AddButton("No Clip", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/bwZreMfj", true))()
+end)
+ 
+GUI:AddButton("Destroy Gui", function() --you dont need "arg" for a button
+library.gui:Destroy()
+end)
+ 
+GUI:AddLabel("Creator:☣BioHazard☣#9086")
+ 
+pcall(function()
+           for i = 1, 1 do
+               game:GetService"StarterGui":SetCore('SendNotification', {
+               Title = "Mining Champions GUI ⛏";
+               Text = "Created by ☣BioHazard☣#9086";
+               Duration = 10;
+                })
+           end
+        end)
+
+OreGem:AddToggle("Mine Spawn 🗿", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Center_Ores"]["Ore_1"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b= false
+    end
+end)
+
+OreGem:AddToggle("Mine Spawn 💎", function(arg) --the (arg) is if the checkbox is toggled or not 
+    if arg then
+        _G.b6 = true 
+        while wait(0) and _G.b6 do
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Island_1"]["Gem_1"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b6= false
+    end
+end)
+
+OreGem:AddToggle("Mine Grassland 🗿", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b2 = true 
+        while wait(0) and _G.b2 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Center_Ores"]["Ore_2"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b2= false
+    end
+end)
+
+OreGem:AddToggle("Mine Grassland 💎", function(arg) --the (arg) is if the checkbox is toggled or not 
+    if arg then
+        _G.b7 = true 
+        while wait(0) and _G.b7 do
+
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Island_2"]["Gem_2"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b7= false
+    end
+end)
+
+OreGem:AddToggle("Mine Desert 🗿", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b3 = true 
+        while wait(0) and _G.b3 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Center_Ores"]["Ore_3"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b3= false
+    end
+end)
+
+OreGem:AddToggle("Mine Desert 💎", function(arg) --the (arg) is if the checkbox is toggled or not 
+    if arg then
+        _G.b8 = true 
+        while wait(0) and _G.b8 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Island_3"]["Gem_3"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b8= false
+    end
+end)
+
+OreGem:AddToggle("Mine Jungle 🗿", function(arg) --the (arg) is if the checkbox is toggled or not 
+    if arg then
+        _G.b5 = true 
+        while wait(0) and _G.b5 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Center_Ores"]["Ore_4"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b5= false
+    end
+end)
+
+OreGem:AddToggle("Mine Jungle 💎", function(arg) --the (arg) is if the checkbox is toggled or not 
+    if arg then
+        _G.b9 = true 
+        while wait(0) and _G.b9 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Island_4"]["Gem_4"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b9= false
+    end
+end)
+
+OreGem:AddToggle("Mine Frozen 🗿", function(arg) --the (arg) is if the checkbox is toggled or not 
+    if arg then
+        _G.b52 = true 
+        while wait(0) and _G.b52 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Center_Ores"]["Ore_5"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b52= false
+    end
+end)
+
+OreGem:AddToggle("Mine Frozen 💎", function(arg) --the (arg) is if the checkbox is toggled or not 
+    if arg then
+        _G.b92 = true 
+        while wait(0) and _G.b92 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Island_5"]["Gem_5"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b92= false
+    end
+end)
+
+OreGem:AddToggle("Mine Space 🗿", function(arg) --the (arg) is if the checkbox is toggled or not 
+    if arg then
+        _G.b53 = true 
+        while wait(0) and _G.b53 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Center_Ores"]["Ore_6"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b53= false
+    end
+end)
+
+OreGem:AddToggle("Mine Space 💎", function(arg) --the (arg) is if the checkbox is toggled or not 
+    if arg then
+        _G.b93 = true 
+        while wait(0) and _G.b93 do
+
+local args = {
+    [1] = workspace.Resources.Ores["World_1"]["Island_6"]["Gem_6"],
+}
+
+game:GetService("ReplicatedStorage").Events.Server.RequestSwing:InvokeServer(unpack(args))
+        end
+    else
+        _G.b93= false
+    end
+end)
+
+EggsX1:AddToggle("Buy Starter Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.za = true 
+        while wait() and _G.za do
+local args = {
+    [1] = "1",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.za = false
+    end
+end)
+
+EggsX1:AddToggle("Buy Gold Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zb = true 
+        while wait() and _G.zb do
+local args = {
+    [1] = "2",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zb = false
+    end
+end)
+
+EggsX1:AddToggle("Buy Grass Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zc = true 
+        while wait() and _G.zc do
+local args = {
+    [1] = "3",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zc = false
+    end
+end)
+
+EggsX1:AddToggle("Buy Desert Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zd = true 
+        while wait() and _G.zd do
+local args = {
+    [1] = "4",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zd = false
+    end
+end)
+
+EggsX1:AddToggle("Buy Jungle Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.ze = true 
+        while wait() and _G.ze do
+local args = {
+    [1] = "5",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.ze = false
+    end
+end)
+
+EggsX1:AddToggle("Buy Ice Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zf = true 
+        while wait() and _G.zf do
+local args = {
+    [1] = "6",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zf = false
+    end
+end)
+
+EggsX1:AddToggle("Buy Moon Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zf77 = true 
+        while wait() and _G.zf77 do
+local args = {
+    [1] = "7",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zf77 = false
+    end
+end)
+
+EggsX1:AddToggle("Buy 1M Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zf4 = true 
+        while wait() and _G.zf4 do
+local args = {
+    [1] = "1M",
+    [2] = 1,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zf4 = false
+    end
+end)
+
+EggsX3:AddToggle("Buy Starter Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.za2 = true 
+        while wait() and _G.za2 do
+local args = {
+    [1] = "1",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.za2 = false
+    end
+end)
+
+EggsX3:AddToggle("Buy Gold Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zb2 = true 
+        while wait() and _G.zb2 do
+local args = {
+    [1] = "2",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zb2 = false
+    end
+end)
+
+EggsX3:AddToggle("Buy Grass Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zc2 = true 
+        while wait() and _G.zc2 do
+local args = {
+    [1] = "3",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zc2 = false
+    end
+end)
+
+EggsX3:AddToggle("Buy Desert Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zd = true 
+        while wait() and _G.zd do
+local args = {
+    [1] = "4",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zd = false
+    end
+end)
+
+EggsX3:AddToggle("Buy Jungle Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.ze2 = true 
+        while wait() and _G.ze2 do
+local args = {
+    [1] = "5",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.ze2 = false
+    end
+end)
+
+EggsX3:AddToggle("Buy Ice Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zf2 = true 
+        while wait() and _G.zf2 do
+local args = {
+    [1] = "6",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zf2 = false
+    end
+end)
+
+EggsX3:AddToggle("Buy Moon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zf4 = true 
+        while wait() and _G.zf4 do
+local args = {
+    [1] = "7",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zf4 = false
+    end
+end)
+
+EggsX3:AddToggle("Buy 1M Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.zf3 = true 
+        while wait() and _G.zf3 do
+local args = {
+    [1] = "1M",
+    [2] = 3,
+}
+
+game:GetService("ReplicatedStorage").Events.Server.BuyEgg:InvokeServer(unpack(args))
+           end
+  else
+    
+        _G.zf3 = false
+    end
+end)
+
+TP:AddButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-677.0755, 27.9270096, 381.884491)
+end)
+
+TP:AddButton("Sell", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-646.548035, 35.514267, 362.693115)
+end)
+
+TP:AddButton("Grassland", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-733.770142, 42.536087, -335.590759)
+end)
+
+TP:AddButton("Desert", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(78.6739502, 82.4922028, -270.493652)
+end)
+
+TP:AddButton("Jungle", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(751.691528, 14.9301367, -239.643433)
+end)
+
+TP:AddButton("Frozen", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1612.87817, -41.0884743, -175.061249)
+end)
+
+TP:AddButton("Space", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2428.87061, -111.055359, -2.27275801)
+end)
+
+--Created by ☣BioHazard☣#9086
