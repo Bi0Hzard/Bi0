@@ -1,0 +1,37 @@
+function Sound44()
+local Song3 = Instance.new("Sound")
+ 
+Song3.Name = "Song3"
+Song3.SoundId = "rbxassetid://452267918"
+Song3.Volume = 2
+Song3.archivable = false
+Song3.Parent = game.Workspace
+Song3:play()
+end
+
+Gui = Instance.new("ScreenGui", game.CoreGui)
+Button = Instance.new("TextButton", Gui)
+Button.Size = UDim2.new(0, 100, 0, 42)
+Button.Font = Enum.Font.SourceSans
+Button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Button.BackgroundTransparency = 0
+Button.BorderColor3 = Color3.fromRGB(255, 0, 127)
+Button.Position = UDim2.new(0.003, 0, 0.93, 0)
+Button.Text = "Enable Noclip"
+Button.TextColor3 = Color3.new(0, 255, 255)
+Button.TextSize = 14.000
+noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+Button.MouseButton1Down:connect(function()
+Sound44()
+noclip = not noclip
+if Button.Text == "Enable Noclip" then
+    Button.Text = "Disable Noclip"
+else
+    Button.Text = "Enable Noclip"
+end
+end)
