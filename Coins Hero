@@ -1,0 +1,297 @@
+--https://www.roblox.com/games/5827078246/New-Coins-Hero-Simulator
+
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/jyG6hWez", true))()
+ 
+local GUI = library:CreateWindow({text='Coins Hero Simulator'})
+local EggsX1 = library:CreateWindow({text='Auto Open 🥚🥚🥚'})
+local TP = library:CreateWindow({text='Teleport'})
+
+--  ANTI AFK
+ 
+local VirtualUser=game:service'VirtualUser'
+        game:GetService("Players").LocalPlayer.Idled:connect(function()
+            VirtualUser:CaptureController()
+            VirtualUser:ClickButton2(Vector2.new())
+end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GUI<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+GUI:AddToggle("Auto Coins", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.auto = true 
+        while wait(0) and _G.auto do
+game:GetService("ReplicatedStorage").CoinToPlayer:FireServer()
+end
+
+    else
+        _G.auto = false
+    end
+end)
+
+GUI:AddToggle("Auto Sell Coins", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.sell = true 
+        while wait(0) and _G.sell do
+game:GetService("ReplicatedStorage").Remotes.Sell:FireServer()
+end
+
+    else
+        _G.sell = false
+    end
+end)
+
+GUI:AddToggle("Auto Buy Backpacks", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bpak = true 
+        while wait(0) and _G.bpak do
+game:GetService("ReplicatedStorage").Remotes.BuyAllBackpacks:InvokeServer()
+end
+
+    else
+        _G.bpak = false
+    end
+end)
+
+GUI:AddToggle("Auto Buy Ranks", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rank = true 
+        while wait(0) and _G.rank do
+game:GetService("ReplicatedStorage").Remotes.Rank:InvokeServer()
+end
+
+    else
+        _G.rank = false
+    end
+end)
+
+GUI:AddToggle("Auto Cosmo Coins", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.cos = true 
+        while wait(0) and _G.cos do
+game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Cosmos",{1e+50,0,0,0})
+end
+
+    else
+        _G.cos = false
+    end
+end)
+
+GUI:AddToggle("Auto Buy Speed Skill", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.sp = true 
+        while wait(0) and _G.sp do
+game:GetService("ReplicatedStorage").Remotes.BuyAllSkills:InvokeServer("Speed")
+end
+
+    else
+        _G.sp = false
+    end
+end)
+
+GUI:AddToggle("Auto Buy Cosmo Skill", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.co = true 
+        while wait(0) and _G.co do
+game:GetService("ReplicatedStorage").Remotes.BuyAllSkills:InvokeServer("Cosmos")
+end
+
+    else
+        _G.co = false
+    end
+end)
+
+GUI:AddToggle("Auto Buy Thunder Skill", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.th = true 
+        while wait(0) and _G.th do
+game:GetService("ReplicatedStorage").Remotes.BuyAllSkills:InvokeServer("Thunder")
+end
+
+    else
+        _G.th = false
+    end
+end)
+
+GUI:AddButton("Rejoin", function()
+local TeleportService = game:GetService("TeleportService")
+local PlaceId = game.PlaceId
+local player = game.Players.LocalPlayer
+if player then
+TeleportService:Teleport(PlaceId, player)
+end
+end)
+
+GUI:AddButton("Infinity Jump", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/ujS74rsD", true))()
+end)
+ 
+GUI:AddButton("No Clip", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/bwZreMfj", true))()
+end)
+ 
+GUI:AddButton("Destroy Gui", function() --you dont need "arg" for a button
+library.gui:Destroy()
+end)
+ 
+GUI:AddLabel("Creator: ☣BioHazard☣#9086")
+ 
+pcall(function()
+           for i = 1, 1 do
+               game:GetService"StarterGui":SetCore('SendNotification', {
+               Title = "Coins Hero Simulator GUI";
+               Text = "Created by ☣BioHazard☣#9086";
+               Duration = 10;
+                })
+           end
+        end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>EGGS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+EggsX1:AddToggle("Auto Buy Chicken Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(0) and _G.b do
+local args = {
+    [1] = 1,
+    [2] = "buy3"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyPets:InvokeServer(unpack(args))
+        end
+    else
+        _G.b = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy Unicorn Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c = true 
+        while wait(0) and _G.c do
+local args = {
+    [1] = 2,
+    [2] = "buy3"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyPets:InvokeServer(unpack(args))
+        end
+    else
+        _G.c = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy Bull Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.d = true 
+        while wait(0) and _G.d do
+local args = {
+    [1] = 3,
+    [2] = "buy3"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyPets:InvokeServer(unpack(args))
+        end
+    else
+        _G.d = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy Dragon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e = true 
+        while wait(0) and _G.e do
+local args = {
+    [1] = 4,
+    [2] = "buy3"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyPets:InvokeServer(unpack(args))
+        end
+    else
+        _G.e = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy Alien Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f = true 
+        while wait(0) and _G.f do
+local args = {
+    [1] = 5,
+    [2] = "buy3"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyPets:InvokeServer(unpack(args))
+        end
+    else
+        _G.f = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy Candy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.g = true 
+        while wait(0) and _G.g do
+local args = {
+    [1] = 6,
+    [2] = "buy3"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyPets:InvokeServer(unpack(args))
+        end
+    else
+        _G.g = false
+    end
+end)
+
+EggsX1:AddToggle("Auto Buy Ice Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.h = true 
+        while wait(0) and _G.h do
+local args = {
+    [1] = 7,
+    [2] = "buy3"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyPets:InvokeServer(unpack(args))
+
+        end
+    else
+        _G.h = false
+    end
+end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>TELEPORT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+TP:AddButton("Spawn",function()
+ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(131.074265, 2.22981238, 56.8812943)
+end)
+
+TP:AddButton("VIP",function()
+ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(15.8949909, 2.22983336, 87.614357)
+end)
+
+TP:AddButton("Unicorn Zone",function()
+ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(164.436295, 2.35419178, 267.629456)
+end)
+
+TP:AddButton("Bull Zone",function()
+ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(139.653061, 2.22640872, 392.11618)
+end)
+
+TP:AddButton("Dragon Zone",function()
+ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(140.565796, 2.22640872, 546.996765)
+end)
+
+TP:AddButton("Alien Zone",function()
+ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(143.272675, 2.22640872, 709.036133)
+end)
+
+TP:AddButton("Candy Zone",function()
+ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(161.068832, 2.25198674, 923.667053)
+end)
+
+TP:AddButton("Ice Zone",function()
+ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(162.190536, 2.2264092, 1058.23535)
+end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>UPGRADES<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
