@@ -1,0 +1,135 @@
+--https://www.roblox.com/games/5517325684/UP-Jumping-Legends
+
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/jyG6hWez", true))()
+ 
+local GUI = library:CreateWindow({text='Jumping Legends'})
+local TP = library:CreateWindow({text='Teleport 💨'})
+
+
+--  ANTI AFK
+ 
+local VirtualUser=game:service'VirtualUser'
+        game:GetService("Players").LocalPlayer.Idled:connect(function()
+            VirtualUser:CaptureController()
+            VirtualUser:ClickButton2(Vector2.new())
+end)
+
+-- GUI
+
+GUI:AddToggle("Auto Jump", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.jump = true 
+        while wait(0) and _G.jump do
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end
+
+    else
+        _G.jump = false
+    end
+end)
+
+GUI:AddToggle("Auto Sell", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.sell = true 
+        while wait(0) and _G.sell do
+game:GetService("ReplicatedStorage")[".shared_Signals"].Sell:FireServer()
+
+        end
+    else
+        _G.sell = false
+    end
+end)
+
+GUI:AddButton("Infinity Jump", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/ujS74rsD", true))()
+end)
+ 
+GUI:AddButton("No Clip", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/bwZreMfj", true))()
+end)
+ 
+GUI:AddButton("Destroy Gui", function() --you dont need "arg" for a button
+library.gui:Destroy()
+end)
+ 
+GUI:AddLabel("Creator: ☣BioHazard☣#9086")
+ 
+pcall(function()
+           for i = 1, 1 do
+               game:GetService"StarterGui":SetCore('SendNotification', {
+               Title = "Jumping Legends GUI";
+               Text = "Created by ☣BioHazard☣#9086";
+               Duration = 10;
+                })
+           end
+        end)
+
+--  TELEPORT
+ 
+TP:AddButton("Spawn", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-29.1114864, 4.45437002, -67.3139267)
+end)
+
+TP:AddButton("Candy Island 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-32.6993752, 1280.41797, -11.3721046)
+end)
+
+TP:AddButton("Candy Island 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-38.9163246, 2150.97217, -32.2038383)
+end)
+
+TP:AddButton("Frozen Island 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-42.789238, 4435.70117, -58.6456718)
+end)
+
+TP:AddButton("Frozen Island 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(18.3693829, 6060.45166, -87.722084)
+end)
+
+TP:AddButton("Sandy Island 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-31.8978977, 9637.40039, -46.8605499)
+end)
+
+TP:AddButton("Sandy Island 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(23.6188354, 11654.3574, -86.3091583)
+end)
+
+TP:AddButton("Magical Island 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(31.807272, 15974.9473, -51.4634361)
+end)
+
+TP:AddButton("Magical Island 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(27.4851799, 18222.2871, -59.0586929)
+end)
+
+TP:AddButton("Glitter Island 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(22.6723232, 23911.3828, -61.8888054)
+end)
+
+TP:AddButton("Glitter Island 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(27.9689369, 27618.0762, -54.8127441)
+end)
+
+TP:AddButton("Chest 1", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(144.926727, 14.6992636, -104.711029)
+end)
+
+TP:AddButton("Chest 2", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-30.7717991, 2992.30884, -25.0513878)
+end)
+
+TP:AddButton("Chest 3", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(9.65137291, 7609.00879, -77.2927704)
+end)
+
+TP:AddButton("Chest 4", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(28.9120407, 13660.0771, -69.1705551)
+end)
+
+TP:AddButton("Chest 5", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(31.1093864, 20512.334, -54.8007507)
+end)
+
+TP:AddButton("Chest 6", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(100.503647, 31342.5039, 1.19418359)
+end)
