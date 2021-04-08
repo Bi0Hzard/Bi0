@@ -1,0 +1,290 @@
+--https://www.roblox.com/games/3623096087/Muscle-Legends
+
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/jyG6hWez", true))()
+ 
+local GUI = library:CreateWindow({text='Muscle Legends 💪'})
+local TP = library:CreateWindow({text='Teleport 💨'})
+local Egg = library:CreateWindow({text='Auto Buy 🥚 Egg'})
+
+--  ANTI AFK
+ 
+local VirtualUser=game:service'VirtualUser'
+        game:GetService("Players").LocalPlayer.Idled:connect(function()
+            VirtualUser:CaptureController()
+            VirtualUser:ClickButton2(Vector2.new())
+end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GUI<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+GUI:AddToggle("Auto Punch", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.pun = true 
+        while wait(0) and _G.pun do
+local args = {
+    [1] = "punch",
+    [2] = "rightHand"
+}
+
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
+end
+
+    else
+        _G.pun = false
+    end
+end)
+
+
+GUI:AddToggle("Auto Reps/Pushups", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rep = true 
+        while wait(0) and _G.rep do
+local args = {
+    [1] = "rep"
+}
+
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
+end
+
+    else
+        _G.rep = false
+    end
+end)
+
+GUI:AddToggle("Auto Bench Press", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.bp = true 
+        while wait(0) and _G.bp do
+local args = {
+    [1] = "rep",
+    [2] = workspace.machinesFolder["Bench Press"].interactSeat
+}
+
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
+end
+
+    else
+        _G.bp = false
+    end
+end)
+
+GUI:AddToggle("Auto Squat Rack", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.sr = true 
+        while wait(0) and _G.sr do
+local args = {
+    [1] = "rep",
+    [2] = workspace.machinesFolder["Squat Rack"].interactSeat
+}
+
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
+end
+
+    else
+        _G.sr = false
+    end
+end)
+
+GUI:AddToggle("Auto Pullups", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.pu = true 
+        while wait(0) and _G.pu do
+local args = {
+    [1] = "rep",
+    [2] = workspace.machinesFolder.Pullups.interactSeat
+}
+
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
+end
+
+    else
+        _G.pu = false
+    end
+end)
+
+GUI:AddToggle("Auto Deadlifts", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.dl = true 
+        while wait(0) and _G.dl do
+local args = {
+    [1] = "rep",
+    [2] = workspace.machinesFolder.Pullups.interactSeat
+}
+
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
+end
+
+    else
+        _G.dl = false
+    end
+end)
+
+GUI:AddToggle("Speed Hack", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.Speed = true 
+        while wait() and _G.Speed do
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
+        end
+    else
+        _G.Speed = false
+           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+         end
+end)
+
+
+
+GUI:AddButton("Infinity Jump", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/ujS74rsD", true))()
+end)
+ 
+GUI:AddButton("No Clip", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/bwZreMfj", true))()
+end)
+ 
+GUI:AddButton("Destroy Gui", function() --you dont need "arg" for a button
+library.gui:Destroy()
+end)
+ 
+GUI:AddLabel("Creator: ☣BioHazard☣#9086")
+ 
+pcall(function()
+           for i = 1, 1 do
+               game:GetService"StarterGui":SetCore('SendNotification', {
+               Title = "Muscle Legends GUI";
+               Text = "Created by ☣BioHazard☣#9086";
+               Duration = 10;
+                })
+           end
+        end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>EGGS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+Egg:AddToggle("Blue Crystal Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.bce = true 
+        while wait() and _G.bce do
+local args = {
+    [1] = "openCrystal",
+    [2] = "Blue Crystal"
+}
+
+game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer(unpack(args))
+end
+    else
+        _G.bce = false
+         end
+end)
+
+Egg:AddToggle("Green Crystal Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.gce = true 
+        while wait() and _G.gce do
+local args = {
+    [1] = "openCrystal",
+    [2] = "Green Crystal"
+}
+
+game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer(unpack(args))
+end
+    else
+        _G.gce = false
+         end
+end)
+
+Egg:AddToggle("Frost Crystal Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.fce = true 
+        while wait() and _G.fce do
+local args = {
+    [1] = "openCrystal",
+    [2] = "Frost Crystal"
+}
+
+game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer(unpack(args))
+end
+    else
+        _G.fce = false
+         end
+end)
+
+Egg:AddToggle("Inferno Crystal Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.ice = true 
+        while wait() and _G.ice do
+local args = {
+    [1] = "openCrystal",
+    [2] = "Inferno Crystal"
+}
+
+game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer(unpack(args))
+end
+    else
+        _G.ice = false
+         end
+end)
+
+Egg:AddToggle("Mythical Crystal Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.mce = true 
+        while wait() and _G.mce do
+local args = {
+    [1] = "openCrystal",
+    [2] = "Mythical Crystal"
+}
+
+game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer(unpack(args))
+end
+    else
+        _G.mce = false
+         end
+end)
+
+Egg:AddToggle("Legend Crystal Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+_G.lce = true 
+        while wait() and _G.lce do
+local args = {
+    [1] = "openCrystal",
+    [2] = "Legends Crystal"
+}
+
+game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer(unpack(args))
+end
+    else
+        _G.lce = false
+         end
+end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>TELEPORT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+TP:AddButton("Spawn Area", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-55.6197815, -504.412628, 736.462036)
+end) 
+
+TP:AddButton("Tiny Gym", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-39.0566292, 15.8091249, 1837.34082)
+end) 
+
+TP:AddButton("Frost Gym", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2569.35083, 18.3070469, -556.98999)
+end)
+
+TP:AddButton("Eternal Gym", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-6715.2876, 18.3070488, -1459.01746)
+end)
+
+TP:AddButton("Mythical Gym", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2207.28662, 18.3070469, 911.15387)
+end)
+
+TP:AddButton("Legends Gym", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(4671.771, 1012.02557, -3690.86255)
+end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>REBIRTHS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>UPGRADES<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
