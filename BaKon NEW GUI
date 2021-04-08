@@ -1,0 +1,330 @@
+--https://www.roblox.com/games/4601704679/Bakon
+
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/jyG6hWez", true))()
+ 
+local GUI = library:CreateWindow({text='BaKon GUI'})
+local UTL = library:CreateWindow({text='Utilities'})
+local UTL2 = library:CreateWindow({text='Utilities'})
+
+--  ANTI AFK
+ 
+local VirtualUser=game:service'VirtualUser'
+        game:GetService("Players").LocalPlayer.Idled:connect(function()
+            VirtualUser:CaptureController()
+            VirtualUser:ClickButton2(Vector2.new())
+end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GUI<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+GUI:AddButton("ESP 👀", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/HzvynH0z", true))()
+end)
+
+GUI:AddButton("Speed Hack", function()
+	local walkspeedplayer = game:GetService("Players").LocalPlayer
+	local walkspeedmouse = walkspeedplayer:GetMouse()
+
+	local walkspeedenabled = false
+
+	function x_walkspeed(key)
+		if (key == "r") then
+			if walkspeedenabled == false then
+				_G.WS = 20;
+				local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+				Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+					Humanoid.WalkSpeed = _G.WS;
+				end)
+				Humanoid.WalkSpeed = _G.WS;
+
+				walkspeedenabled = true
+			elseif walkspeedenabled == true then
+				_G.WS = 17;
+				local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+				Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+					Humanoid.WalkSpeed = _G.WS;
+				end)
+				Humanoid.WalkSpeed = _G.WS;
+
+				walkspeedenabled = false
+			end
+		end
+	end
+
+	walkspeedmouse.KeyDown:connect(x_walkspeed)
+
+end)
+
+GUI:AddButton("Rejoin", function()
+local TeleportService = game:GetService("TeleportService")
+local PlaceId = game.PlaceId
+local player = game.Players.LocalPlayer
+if player then
+TeleportService:Teleport(PlaceId, player)
+end
+end)
+
+GUI:AddButton("Infinity Jump", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/ujS74rsD", true))()
+end)
+ 
+GUI:AddButton("No Clip", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/bwZreMfj", true))()
+end)
+ 
+GUI:AddButton("Destroy Gui", function() --you dont need "arg" for a button
+library.gui:Destroy()
+end)
+ 
+GUI:AddLabel("Creator: ☣BioHazard☣#9086")
+ 
+pcall(function()
+           for i = 1, 1 do
+               game:GetService"StarterGui":SetCore('SendNotification', {
+               Title = "BaKon GUI";
+               Text = "Created by ☣BioHazard☣#9086";
+               Duration = 10;
+                })
+           end
+        end)
+
+--==========================================UTILITY=====================================
+
+UTL:AddButton("Ax 🪓", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Ax"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Battary 🔋", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Battary"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Bear", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Bear"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Belt", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Belt"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Blue Book 📘", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Blue Book"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Blue Box 🟦", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Blue Box"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Blue Key 🔑", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Blue Key"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Bronze Trophy 🥉", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Bronze Trophy"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Chair 🪑", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Chair"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Coin ©", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Coin"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Crowbar", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Crowbar"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Fire Extinguisher 🧯", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["FireExtinguisher"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Fish 🐟", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Fish"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Fishing Rod 🎣", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Rod"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Gold Trophy 🥇", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Gold Trophy"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Golden Gear", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Golden Gear"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Green Book 📗", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Green Book"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Green Box 🟩", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Green Box"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Green Key 🔑", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Green Key"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Green Wire 〰", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Green Wire"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Hammer 🔨", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Hammer"].Bounds.PickUp)
+end)
+
+UTL:AddButton("ID Card 💳", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["ID Card"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Knob", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Knob"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Ladder", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Ladder"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Lever", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Lever"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Light Bulb 💡", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Light Bulb"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Metal", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Metal"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Orange Key 🔑", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Orange Key"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Padlock 🔒", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Padlock"].Bounds.PickUp)
+end)
+
+UTL:AddButton("Pickaxe ⛏", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Pickaxe"].Bounds.PickUp)
+end)
+
+--==========================================UTILITY2=====================================
+
+UTL2:AddButton("Pink Key 🔑", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Pink Key"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Plank", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Plank"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Plasma Cutter", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Plasma Cutter"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Power Button", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Power Button"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Power Cord 🔌", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Power Cord"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Purple Key 🔑", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Purple Key"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Red Book 📕", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Red Book"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Red Box 🟥", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Red Box"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Red Key 🔑", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Red Key"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Red Wire 〰", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Red Wire"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Rust Buster", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Rust Buster"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Scissors ✂", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Scissors"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Shovel", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Shovel"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Silver Trophy 🥈", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Silver Trophy"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Stone", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Stone"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Taser", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Taser"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Teddy 🧸", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Teddy"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Textbook 📚", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Textbook"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Thermite", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Thermite"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Toy Hammer", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Toy Hammer"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Truck 🚛", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Truck"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Truck Key 🚛🔑", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Truck Key"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Truss", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Truss"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("USB", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["USB"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("White Key 🔑", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["White Key"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("White Valve", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["White Valve"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Wrench 🔧", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Wrench"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Yellow Key 🔑", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Yellow Key"].Bounds.PickUp)
+end)
+
+UTL2:AddButton("Yellow Valve", function() --you dont need "arg" for a button
+fireclickdetector(game.Workspace.CurrentMap:FindFirstChildOfClass("Folder").Utilities["Yellow Valve"].Bounds.PickUp)
+end)
+
+--==========================================RESPAWNs=====================================
