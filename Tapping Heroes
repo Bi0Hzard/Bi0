@@ -1,0 +1,1370 @@
+--https://www.roblox.com/games/5486962185/NEW-Tapping-Heroes
+
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/jyG6hWez", true))()
+ 
+local GUI = library:CreateWindow({text='Tapping Heroes 🖱'})
+local EggsX3 = library:CreateWindow({text='Auto Buy 🥚🥚🥚'})
+local Reb = library:CreateWindow({text='Rebirth 💫'})
+local Upg = library:CreateWindow({text='Upgrade 🌟'})
+
+
+--  ANTI AFK
+ 
+local VirtualUser=game:service'VirtualUser'
+        game:GetService("Players").LocalPlayer.Idled:connect(function()
+            VirtualUser:CaptureController()
+            VirtualUser:ClickButton2(Vector2.new())
+end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GUI<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+GUI:AddToggle("Auto Clicker", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.tap = true 
+        while wait(0) and _G.tap do
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "HandleTapActivation",
+    [3] = "Home"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+
+end
+
+    else
+        _G.tap = false
+    end
+end)
+
+GUI:AddToggle("Farm 💎", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.gemz = true 
+        while wait(0) and _G.gemz do
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Home",
+    [4] = "1"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Home",
+    [4] = "2"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Home",
+    [4] = "3"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Winter",
+    [4] = "1"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Winter",
+    [4] = "2"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Winter",
+    [4] = "3"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Toy",
+    [4] = "1"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Toy",
+    [4] = "2"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Toy",
+    [4] = "3"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Candy",
+    [4] = "1"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Candy",
+    [4] = "2"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Candy",
+    [4] = "3"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Atlantis",
+    [4] = "1"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Atlantis",
+    [4] = "2"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Atlantis",
+    [4] = "3"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Magma",
+    [4] = "1"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Magma",
+    [4] = "2"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Magma",
+    [4] = "3"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Space",
+    [4] = "1"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Space",
+    [4] = "2"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "DamageCrystal",
+    [3] = "Space",
+    [4] = "3"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+
+        end
+    else
+        _G.gemz = false
+    end
+end)
+
+GUI:AddToggle("Auto Sell Home", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.sell = true 
+        while wait(1) and _G.sell do
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "SellTaps",
+    [3] = "Home"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+
+end
+
+    else
+        _G.sell = false
+    end
+end)
+
+GUI:AddToggle("Auto Sell Winter x2", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.sell2 = true 
+        while wait(1) and _G.sell2 do
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "SellTaps",
+    [3] = "Winter"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+
+end
+
+    else
+        _G.sell2 = false
+    end
+end)
+
+GUI:AddToggle("Auto Sell Toy x3", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.sell3 = true 
+        while wait(1) and _G.sell3 do
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "SellTaps",
+    [3] = "Toy"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+
+end
+
+    else
+        _G.sell3 = false
+    end
+end)
+
+GUI:AddToggle("Auto Sell Candy x4", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.sell4 = true 
+        while wait(1) and _G.sell4 do
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "SellTaps",
+    [3] = "Candy"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+
+end
+
+    else
+        _G.sell4 = false
+    end
+end)
+
+GUI:AddToggle("Auto Sell Atlantis x5", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.sell5 = true 
+        while wait(1) and _G.sell5 do
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "SellTaps",
+    [3] = "Atlantis"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+
+end
+
+    else
+        _G.sell5 = false
+    end
+end)
+
+GUI:AddToggle("Auto Sell Magma x6", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.sell6 = true 
+        while wait(1) and _G.sell6 do
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "SellTaps",
+    [3] = "Magma"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+
+end
+
+    else
+        _G.sell6 = false
+    end
+end)
+
+GUI:AddToggle("Auto Sell Space x7", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.sell7 = true 
+        while wait(1) and _G.sell7 do
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "SellTaps",
+    [3] = "Space"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+
+end
+
+    else
+        _G.sell7 = false
+    end
+end)
+
+GUI:AddToggle("Auto Evolve Pets", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.evo = true 
+        while wait(0) and _G.evo do
+local args = {
+    [1] = "EvolveAllPets"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+
+end
+
+    else
+        _G.evo = false
+    end
+end)
+
+GUI:AddButton("Destroy Prompts",function()
+while true do
+-- Remove Purchase Prompt UI
+local WaitForCOre = game:FindFirstChild("CoreGui")
+if WaitForCOre then
+local checkforprAPP = WaitForCOre:FindFirstChild("PurchasePromptApp")
+if checkforprAPP then
+checkforprAPP:Destroy()
+end
+end
+-- Remove Robux Store UI
+local checkforstore = game:GetService("Players")[game.Players.LocalPlayer.Name].PlayerGui:FindFirstChild("Store")
+if checkforstore then
+checkforstore:Destroy()
+end
+-- Remove Error message / You do not have enough.....
+local stramlook = game:GetService("Players")[game.Players.LocalPlayer.Name].PlayerGui.Feedback:FindFirstChild("Stream")
+if stramlook then
+stramlook:Destroy()
+end
+-- Remove BLUR bug from removed shop UI
+local checkforblur = game:GetService("Lighting"):FindFirstChild("InterfaceBlur")
+if checkforblur then
+checkforblur:Destroy()
+end
+wait(5)
+end
+end)
+
+GUI:AddButton("Rejoin", function()
+local TeleportService = game:GetService("TeleportService")
+local PlaceId = game.PlaceId
+local player = game.Players.LocalPlayer
+if player then
+TeleportService:Teleport(PlaceId, player)
+end
+end)
+
+GUI:AddButton("Infinity Jump", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/ujS74rsD", true))()
+end)
+ 
+GUI:AddButton("No Clip", function() --you dont need "arg" for a button
+loadstring(game:HttpGet("https://pastebin.com/raw/bwZreMfj", true))()
+end)
+ 
+GUI:AddButton("Destroy Gui", function() --you dont need "arg" for a button
+library.gui:Destroy()
+end)
+ 
+GUI:AddLabel("Creator: ☣BioHazard☣#9086")
+ 
+pcall(function()
+           for i = 1, 1 do
+               game:GetService"StarterGui":SetCore('SendNotification', {
+               Title = "Tapping Heroes GUI";
+               Text = "Created by ☣BioHazard☣#9086";
+               Duration = 10;
+                })
+           end
+        end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>EGGS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+EggsX3:AddToggle("250 Starter Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.a = true 
+        while wait(4) and _G.a do
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Starter",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.a = false
+    end
+end)
+
+EggsX3:AddToggle("5K Spiked Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.b = true 
+        while wait(4) and _G.b do
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Spiked",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.b = false
+    end
+end)
+
+EggsX3:AddToggle("500K Iceberg Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.c = true 
+        while wait(4) and _G.c do
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Iceberg",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.c = false
+    end
+end)
+
+EggsX3:AddToggle("50M Snowball Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.d = true 
+        while wait(4) and _G.d do
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Snowball",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.d = false
+    end
+end)
+
+EggsX3:AddToggle("250M Toy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.e = true 
+        while wait(4) and _G.e do
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Snowball",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.e = false
+    end
+end)
+
+EggsX3:AddToggle("2.5B Brick Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f = true 
+        while wait(4) and _G.f do
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Brick",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.f = false
+    end
+end)
+
+EggsX3:AddToggle("5B Cupcake Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.g = true 
+        while wait(4) and _G.g do
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Cupcake",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.g = false
+    end
+end)
+
+EggsX3:AddToggle("20B Sugar Rush Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.h = true 
+        while wait(4) and _G.h do
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Sugar Rush",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.h = false
+    end
+end)
+
+EggsX3:AddToggle("150B Atlantis Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.i = true 
+        while wait(4) and _G.i do
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Atlantis",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.i = false
+    end
+end)
+
+EggsX3:AddToggle("1T Trident Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.j = true 
+        while wait(4) and _G.j do
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Trident",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.j = false
+    end
+end)
+
+EggsX3:AddToggle("5T Eruption Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.k = true 
+        while wait(4) and _G.k do
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Eruption",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.k = false
+    end
+end)
+
+EggsX3:AddToggle("20T Dark Obsidian Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.l = true 
+        while wait(4) and _G.l do
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Dark Obsidian",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.l = false
+    end
+end)
+
+EggsX3:AddToggle("100T Asteroid Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.m = true 
+        while wait(4) and _G.m do
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Asteroid",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.m = false
+    end
+end)
+
+EggsX3:AddToggle("1Qd Galaxy Egg", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.n = true 
+        while wait(4) and _G.n do
+local args = {
+    [1] = "PurchaseEgg",
+    [2] = "Galaxy",
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdatePets:FireServer(unpack(args))
+        end
+    else
+        _G.n = false
+    end
+end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>TELEPORT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+ 
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>REBIRTHS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+Reb:AddToggle("1 Rebirth", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb1 = true 
+        while wait(0) and _G.rb1 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 1
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb1 = false
+    end
+end)
+
+Reb:AddToggle("5 Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb2 = true 
+        while wait(0) and _G.rb2 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 2
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb2 = false
+    end
+end)
+
+Reb:AddToggle("10 Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb3 = true 
+        while wait(0) and _G.rb3 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb3 = false
+    end
+end)
+
+Reb:AddToggle("25 Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb4 = true 
+        while wait(0) and _G.rb4 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 4
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb4 = false
+    end
+end)
+
+Reb:AddToggle("50 Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb5 = true 
+        while wait(0) and _G.rb5 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 5
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb5 = false
+    end
+end)
+
+Reb:AddToggle("100 Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb6 = true 
+        while wait(0) and _G.rb6 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 6
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb6 = false
+    end
+end)
+
+Reb:AddToggle("1K Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb7 = true 
+        while wait(0) and _G.rb7 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 7
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb7 = false
+    end
+end)
+
+Reb:AddToggle("5K Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb8 = true 
+        while wait(0) and _G.rb8 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 8
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb8 = false
+    end
+end)
+
+Reb:AddToggle("10K Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb9 = true 
+        while wait(0) and _G.rb9 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 9
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb9 = false
+    end
+end)
+
+Reb:AddToggle("25K Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb10 = true 
+        while wait(0) and _G.rb10 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 10
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb10 = false
+    end
+end)
+
+Reb:AddToggle("50K Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb11 = true 
+        while wait(0) and _G.rb11 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 11
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb11 = false
+    end
+end)
+
+Reb:AddToggle("100K Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb12 = true 
+        while wait(0) and _G.rb12 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 12
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb12 = false
+    end
+end)
+
+Reb:AddToggle("500K Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb13 = true 
+        while wait(0) and _G.rb13 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 13
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb13 = false
+    end
+end)
+
+Reb:AddToggle("1M Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb14 = true 
+        while wait(0) and _G.rb14 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 14
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb14 = false
+    end
+end)
+
+Reb:AddToggle("5M Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb15 = true 
+        while wait(0) and _G.rb15 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 15
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb15 = false
+    end
+end)
+
+Reb:AddToggle("25M Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb16 = true 
+        while wait(0) and _G.rb16 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 16
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb16 = false
+    end
+end)
+
+Reb:AddToggle("100M Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb17 = true 
+        while wait(0) and _G.rb17 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 17
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb17 = false
+    end
+end)
+
+Reb:AddToggle("500M Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb18 = true 
+        while wait(0) and _G.rb18 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 18
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb18 = false
+    end
+end)
+
+Reb:AddToggle("2.5B Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.rb19 = true 
+        while wait(0) and _G.rb19 do
+local args = {
+    [1] = "BuyRebirths",
+    [2] = 19
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateRebirths:FireServer(unpack(args))
+
+        end
+    else
+        _G.rb19 = false
+    end
+end)
+
+-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>UPGRADES<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+Upg:AddToggle("Tap Capacity", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.tcc = true 
+        while wait(0) and _G.tcc do
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "BuyMax",
+    [3] = "Home"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "BuyMax",
+    [3] = "Winter"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "BuyMax",
+    [3] = "Toy"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "BuyMax",
+    [3] = "Candy"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "BuyMax",
+    [3] = "Atlantis"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "BuyMax",
+    [3] = "Magma"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Tap Capacity",
+    [2] = "BuyMax",
+    [3] = "Space"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+        end
+    else
+        _G.tcc = false
+    end
+end)
+
+Upg:AddToggle("More Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.mr = true 
+        while wait(0) and _G.mr do
+local args = {
+    [1] = "More Rebirths",
+    [2] = "BuyMax",
+    [3] = "Home"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "More Rebirths",
+    [2] = "BuyMax",
+    [3] = "Winter"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "More Rebirths",
+    [2] = "BuyMax",
+    [3] = "Toy"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "More Rebirths",
+    [2] = "BuyMax",
+    [3] = "Candy"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "More Rebirths",
+    [2] = "BuyMax",
+    [3] = "Atlantis"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "More Rebirths",
+    [2] = "BuyMax",
+    [3] = "Magma"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "More Rebirths",
+    [2] = "BuyMax",
+    [3] = "Space"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+        end
+    else
+        _G.mr = false
+    end
+end)
+
+Upg:AddToggle("Faster Speed", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.fs = true 
+        while wait(0) and _G.fs do
+local args = {
+    [1] = "Faster Speed",
+    [2] = "BuyMax",
+    [3] = "Home"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Faster Speed",
+    [2] = "BuyMax",
+    [3] = "Winter"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Faster Speed",
+    [2] = "BuyMax",
+    [3] = "Toy"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Faster Speed",
+    [2] = "BuyMax",
+    [3] = "Candy"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Faster Speed",
+    [2] = "BuyMax",
+    [3] = "Atlantis"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Faster Speed",
+    [2] = "BuyMax",
+    [3] = "Magma"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Faster Speed",
+    [2] = "BuyMax",
+    [3] = "Space"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+        end
+    else
+        _G.fs = false
+    end
+end)
+
+Upg:AddToggle("More Coins", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.mc = true 
+        while wait(0) and _G.mc do
+local args = {
+    [1] = "More Coins",
+    [2] = "BuyMax",
+    [3] = "Winter"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "More Coins",
+    [2] = "BuyMax",
+    [3] = "Toy"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "More Coins",
+    [2] = "BuyMax",
+    [3] = "Candy"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "More Coins",
+    [2] = "BuyMax",
+    [3] = "Atlantis"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "More Coins",
+    [2] = "BuyMax",
+    [3] = "Magma"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "More Coins",
+    [2] = "BuyMax",
+    [3] = "Space"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+        end
+    else
+        _G.mc = false
+    end
+end)
+
+Upg:AddToggle("More Gems", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.mg = true 
+        while wait(0) and _G.mg do
+local args = {
+    [1] = "More Gems",
+    [2] = "BuyMax",
+    [3] = "Winter"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "More Gems",
+    [2] = "BuyMax",
+    [3] = "Toy"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "More Gems",
+    [2] = "BuyMax",
+    [3] = "Candy"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "More Gems",
+    [2] = "BuyMax",
+    [3] = "Atlantis"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "More Gems",
+    [2] = "BuyMax",
+    [3] = "Magma"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "More Gems",
+    [2] = "BuyMax",
+    [3] = "Space"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+        end
+    else
+        _G.mg = false
+    end
+end)
+
+Upg:AddToggle("Pet Storage", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.ps = true 
+        while wait(0) and _G.ps do
+local args = {
+    [1] = "Pet Storage",
+    [2] = "BuyMax",
+    [3] = "Candy"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Pet Storage",
+    [2] = "BuyMax",
+    [3] = "Atlantis"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Pet Storage",
+    [2] = "BuyMax",
+    [3] = "Magma"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Pet Storage",
+    [2] = "BuyMax",
+    [3] = "Space"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+        end
+    else
+        _G.ps = false
+    end
+end)
+
+Upg:AddToggle("+ Pet Equip (max 2)", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.epe = true 
+        while wait(0) and _G.epe do
+local args = {
+    [1] = "Extra Pet Equips",
+    [2] = "BuyMax",
+    [3] = "Atlantis"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Extra Pet Equips",
+    [2] = "BuyMax",
+    [3] = "Magma"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+local args = {
+    [1] = "Extra Pet Equips",
+    [2] = "BuyMax",
+    [3] = "Space"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+
+
+        end
+    else
+        _G.epe = false
+    end
+end)
+
+Upg:AddToggle("x2 Tap Chance", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.tc = true 
+        while wait(0) and _G.tc do
+local args = {
+    [1] = "x2 Tap Chance",
+    [2] = "BuyMax",
+    [3] = "Space"
+}
+
+game:GetService("ReplicatedStorage").Shared.Modules.Utilities.NetworkUtility.Events.UpdateGemUpgrades:FireServer(unpack(args))
+
+        end
+    else
+        _G.tc = false
+    end
+end)
+
