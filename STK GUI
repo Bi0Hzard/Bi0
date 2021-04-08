@@ -1,0 +1,505 @@
+--GUI made by ☣BioHazard☣#9086--
+
+local ScreenGui = Instance.new("ScreenGui")
+local OpenFrame = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+local Main = Instance.new("Frame")
+local Name = Instance.new("TextLabel")
+local Credit = Instance.new("TextLabel")
+local ESP = Instance.new("TextButton")
+local DarkwoodAsylum2 = Instance.new("TextButton")
+local InfinityJumps = Instance.new("TextButton")
+local Fly = Instance.new("TextButton")
+local DarkwoodAsylum1 = Instance.new("TextButton")
+local Neighbourhood1 = Instance.new("TextButton")
+local Fairground1 = Instance.new("TextButton")
+local Fairground2 = Instance.new("TextButton")
+local Respawn = Instance.new("TextButton")
+local Neighbourhood2 = Instance.new("TextButton")
+local NightSchool1 = Instance.new("TextButton")
+local NightSchool2 = Instance.new("TextButton")
+local PapaRonisPizzaria1 = Instance.new("TextButton")
+local PapaRonisPizzaria2 = Instance.new("TextButton")
+local WaterTreatment1 = Instance.new("TextButton")
+local WaterTreatment2 = Instance.new("TextButton")
+local TPtoExit = Instance.new("TextButton")
+local Coins = Instance.new("TextButton")
+local WillowMarsh1 = Instance.new("TextButton")
+local Lobby = Instance.new("TextButton")
+local WillowMarsh2 = Instance.new("TextButton")
+local NoClip = Instance.new("TextButton")
+local Destroy = Instance.new("TextButton")
+local Minimize = Instance.new("TextButton")
+local InfinityYeildAdminCMDs = Instance.new("TextButton")
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = ScreenGui
+OpenFrame.Active = true
+OpenFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+OpenFrame.BorderColor3 = Color3.fromRGB(255, 0, 127)
+OpenFrame.Position = UDim2.new(0.00763791148, 0, 0.465164781, 0)
+OpenFrame.Size = UDim2.new(0, 100, 0, 35)
+
+Open.Name = "Open"
+Open.Parent = OpenFrame
+Open.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Open.BorderColor3 = Color3.fromRGB(255, 0, 127)
+Open.Position = UDim2.new(0.0600000024, 0, 0.171428561, 0)
+Open.Size = UDim2.new(0, 88, 0, 23)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(0, 255, 255)
+Open.TextSize = 21.000
+Open.TextWrapped = true
+Open.MouseButton1Down:connect(function()
+Sound22()
+Main.Visible = true
+OpenFrame.Visible = false
+end)
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.Active = true
+Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Main.BackgroundTransparency = 0.300
+Main.BorderColor3 = Color3.fromRGB(255, 0, 127)
+Main.Position = UDim2.new(0.315155178, 0, 0.156519026, 0)
+Main.Size = UDim2.new(0, 502, 0, 291)
+Main.Visible = false
+Main.Draggable = true
+
+Name.Name = "Name"
+Name.Parent = Main
+Name.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Name.BorderColor3 = Color3.fromRGB(255, 0, 127)
+Name.Position = UDim2.new(0, 0, -0.0274914093, 0)
+Name.Size = UDim2.new(0, 502, 0, 29)
+Name.Font = Enum.Font.SourceSans
+Name.Text = "Survive The Killer GUI v1"
+Name.TextColor3 = Color3.fromRGB(255, 0, 127)
+Name.TextSize = 20.000
+Name.TextWrapped = true
+
+Credit.Name = "Credit"
+Credit.Parent = Main
+Credit.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Credit.BorderColor3 = Color3.fromRGB(255, 0, 127)
+Credit.Position = UDim2.new(0, 0, 0.927835047, 0)
+Credit.Size = UDim2.new(0, 502, 0, 21)
+Credit.Font = Enum.Font.SourceSans
+Credit.Text = "GUI Created by ☣BioHazard☣#9086"
+Credit.TextColor3 = Color3.fromRGB(255, 0, 127)
+Credit.TextSize = 16.000
+Credit.TextWrapped = true
+
+ESP.Name = "ESP"
+ESP.Parent = Main
+ESP.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ESP.BorderColor3 = Color3.fromRGB(255, 0, 127)
+ESP.Position = UDim2.new(0.0139442235, 0, 0.0996563584, 0)
+ESP.Size = UDim2.new(0, 116, 0, 31)
+ESP.Font = Enum.Font.SourceSans
+ESP.Text = "ESP"
+ESP.TextColor3 = Color3.fromRGB(0, 255, 255)
+ESP.TextSize = 14.000
+ESP.MouseButton1Down:connect(function()
+Sound22()
+loadstring(game:HttpGet("https://pastebin.com/raw/HzvynH0z", true))()
+end)
+
+DarkwoodAsylum2.Name = "Darkwood Asylum 2"
+DarkwoodAsylum2.Parent = Main
+DarkwoodAsylum2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DarkwoodAsylum2.BorderColor3 = Color3.fromRGB(255, 0, 127)
+DarkwoodAsylum2.Position = UDim2.new(0.258964151, 0, 0.237956882, 0)
+DarkwoodAsylum2.Size = UDim2.new(0, 116, 0, 31)
+DarkwoodAsylum2.Font = Enum.Font.SourceSans
+DarkwoodAsylum2.Text = "Darkwood Asylum 2"
+DarkwoodAsylum2.TextColor3 = Color3.fromRGB(0, 255, 255)
+DarkwoodAsylum2.TextSize = 14.000
+DarkwoodAsylum2.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(981.355774, 201.22496, 95.5527267)
+end)
+
+InfinityJumps.Name = "Infinity Jumps"
+InfinityJumps.Parent = Main
+InfinityJumps.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+InfinityJumps.BorderColor3 = Color3.fromRGB(255, 0, 127)
+InfinityJumps.Position = UDim2.new(0.507968187, 0, 0.0996563584, 0)
+InfinityJumps.Size = UDim2.new(0, 116, 0, 31)
+InfinityJumps.Font = Enum.Font.SourceSans
+InfinityJumps.Text = "Infinity Jumps"
+InfinityJumps.TextColor3 = Color3.fromRGB(0, 255, 255)
+InfinityJumps.TextSize = 14.000
+InfinityJumps.MouseButton1Down:connect(function()
+Sound22()
+loadstring(game:HttpGet("https://pastebin.com/raw/ujS74rsD", true))()
+end)
+
+Fly.Name = "Fly [Press E]"
+Fly.Parent = Main
+Fly.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Fly.BorderColor3 = Color3.fromRGB(255, 0, 127)
+Fly.Position = UDim2.new(0.754980147, 0, 0.0996563584, 0)
+Fly.Size = UDim2.new(0, 116, 0, 31)
+Fly.Font = Enum.Font.SourceSans
+Fly.Text = "Fly [Press E]"
+Fly.TextColor3 = Color3.fromRGB(0, 255, 255)
+Fly.TextSize = 14.000
+Fly.MouseButton1Down:connect(function()
+Sound22()
+loadstring(game:HttpGet("https://pastebin.com/raw/7apYJJV4", true))()
+end)
+
+DarkwoodAsylum1.Name = "Darkwood Asylum 1"
+DarkwoodAsylum1.Parent = Main
+DarkwoodAsylum1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DarkwoodAsylum1.BorderColor3 = Color3.fromRGB(255, 0, 127)
+DarkwoodAsylum1.Position = UDim2.new(0.0139442235, 0, 0.237956882, 0)
+DarkwoodAsylum1.Size = UDim2.new(0, 116, 0, 31)
+DarkwoodAsylum1.Font = Enum.Font.SourceSans
+DarkwoodAsylum1.Text = "Darkwood Asylum 1"
+DarkwoodAsylum1.TextColor3 = Color3.fromRGB(0, 255, 255)
+DarkwoodAsylum1.TextSize = 14.000
+DarkwoodAsylum1.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(845.305847, 224.125153, 24.1962528)
+end)
+
+Neighbourhood1.Name = "Neighbourhood 1"
+Neighbourhood1.Parent = Main
+Neighbourhood1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Neighbourhood1.BorderColor3 = Color3.fromRGB(255, 0, 127)
+Neighbourhood1.Position = UDim2.new(0.0139442235, 0, 0.3726179, 0)
+Neighbourhood1.Size = UDim2.new(0, 116, 0, 31)
+Neighbourhood1.Font = Enum.Font.SourceSans
+Neighbourhood1.Text = "Neighbourhood 1"
+Neighbourhood1.TextColor3 = Color3.fromRGB(0, 255, 255)
+Neighbourhood1.TextSize = 14.000
+Neighbourhood1.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(27.5017338, 6.25280523, 119.811707)
+end)
+
+Fairground1.Name = "Fairground 1"
+Fairground1.Parent = Main
+Fairground1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Fairground1.BorderColor3 = Color3.fromRGB(255, 0, 127)
+Fairground1.Position = UDim2.new(0.507968187, 0, 0.237956882, 0)
+Fairground1.Size = UDim2.new(0, 116, 0, 31)
+Fairground1.Font = Enum.Font.SourceSans
+Fairground1.Text = "Fairground 1"
+Fairground1.TextColor3 = Color3.fromRGB(0, 255, 255)
+Fairground1.TextSize = 14.000
+Fairground1.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(845.310913, 237.948074, 376.052094)
+end)
+
+Fairground2.Name = "Fairground 2"
+Fairground2.Parent = Main
+Fairground2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Fairground2.BorderColor3 = Color3.fromRGB(255, 0, 127)
+Fairground2.Position = UDim2.new(0.754980147, 0, 0.237956882, 0)
+Fairground2.Size = UDim2.new(0, 116, 0, 31)
+Fairground2.Font = Enum.Font.SourceSans
+Fairground2.Text = "Fairground 2"
+Fairground2.TextColor3 = Color3.fromRGB(0, 255, 255)
+Fairground2.TextSize = 14.000
+Fairground2.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(740.054749, 251.48143, 667.184509)
+end)
+
+Respawn.Name = "Respawn"
+Respawn.Parent = Main
+Respawn.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Respawn.BorderColor3 = Color3.fromRGB(255, 0, 127)
+Respawn.Position = UDim2.new(0.754980147, 0, 0.649219036, 0)
+Respawn.Size = UDim2.new(0, 116, 0, 31)
+Respawn.Font = Enum.Font.SourceSans
+Respawn.Text = "Respawn"
+Respawn.TextColor3 = Color3.fromRGB(0, 255, 255)
+Respawn.TextSize = 14.000
+Respawn.MouseButton1Down:connect(function()
+Sound22()
+loadstring(game:HttpGet("https://pastebin.com/raw/Uf8TWsqJ", true))()
+end)
+
+Neighbourhood2.Name = "Neighbourhood 2"
+Neighbourhood2.Parent = Main
+Neighbourhood2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Neighbourhood2.BorderColor3 = Color3.fromRGB(255, 0, 127)
+Neighbourhood2.Position = UDim2.new(0.258964151, 0, 0.3726179, 0)
+Neighbourhood2.Size = UDim2.new(0, 116, 0, 31)
+Neighbourhood2.Font = Enum.Font.SourceSans
+Neighbourhood2.Text = "Neighbourhood 2"
+Neighbourhood2.TextColor3 = Color3.fromRGB(0, 255, 255)
+Neighbourhood2.TextSize = 14.000
+Neighbourhood2.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12.2760572, 5.74081707, 333.419891)
+end)
+
+NightSchool1.Name = "Night School 1"
+NightSchool1.Parent = Main
+NightSchool1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+NightSchool1.BorderColor3 = Color3.fromRGB(255, 0, 127)
+NightSchool1.Position = UDim2.new(0.507968187, 0, 0.3726179, 0)
+NightSchool1.Size = UDim2.new(0, 116, 0, 31)
+NightSchool1.Font = Enum.Font.SourceSans
+NightSchool1.Text = "Night School 1"
+NightSchool1.TextColor3 = Color3.fromRGB(0, 255, 255)
+NightSchool1.TextSize = 14.000
+NightSchool1.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(199.470032, 177.082748, 557.240051)
+end)
+
+NightSchool2.Name = "Night School 2"
+NightSchool2.Parent = Main
+NightSchool2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+NightSchool2.BorderColor3 = Color3.fromRGB(255, 0, 127)
+NightSchool2.Position = UDim2.new(0.754980147, 0, 0.3726179, 0)
+NightSchool2.Size = UDim2.new(0, 116, 0, 31)
+NightSchool2.Font = Enum.Font.SourceSans
+NightSchool2.Text = "Night School 2"
+NightSchool2.TextColor3 = Color3.fromRGB(0, 255, 255)
+NightSchool2.TextSize = 14.000
+NightSchool2.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(60.4291878, 177.082718, 771.593933)
+end)
+
+PapaRonisPizzaria1.Name = "Papa Roni's Pizzaria 1"
+PapaRonisPizzaria1.Parent = Main
+PapaRonisPizzaria1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PapaRonisPizzaria1.BorderColor3 = Color3.fromRGB(255, 0, 127)
+PapaRonisPizzaria1.Position = UDim2.new(0.0139442235, 0, 0.510918498, 0)
+PapaRonisPizzaria1.Size = UDim2.new(0, 116, 0, 31)
+PapaRonisPizzaria1.Font = Enum.Font.SourceSans
+PapaRonisPizzaria1.Text = "Papa Roni's Pizzaria 1"
+PapaRonisPizzaria1.TextColor3 = Color3.fromRGB(0, 255, 255)
+PapaRonisPizzaria1.TextSize = 14.000
+PapaRonisPizzaria1.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-453.283386, 105.534309, 104.392426)
+end)
+
+PapaRonisPizzaria2.Name = "Papa Roni's Pizzaria 2"
+PapaRonisPizzaria2.Parent = Main
+PapaRonisPizzaria2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PapaRonisPizzaria2.BorderColor3 = Color3.fromRGB(255, 0, 127)
+PapaRonisPizzaria2.Position = UDim2.new(0.258964151, 0, 0.510918498, 0)
+PapaRonisPizzaria2.Size = UDim2.new(0, 116, 0, 31)
+PapaRonisPizzaria2.Font = Enum.Font.SourceSans
+PapaRonisPizzaria2.Text = "Papa Roni's Pizzaria 2"
+PapaRonisPizzaria2.TextColor3 = Color3.fromRGB(0, 255, 255)
+PapaRonisPizzaria2.TextSize = 14.000
+PapaRonisPizzaria2.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-442.864594, 104.935799, 8.11289787)
+end)
+
+WaterTreatment1.Name = "Water Treatment 1"
+WaterTreatment1.Parent = Main
+WaterTreatment1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+WaterTreatment1.BorderColor3 = Color3.fromRGB(255, 0, 127)
+WaterTreatment1.Position = UDim2.new(0.507968187, 0, 0.510918498, 0)
+WaterTreatment1.Selectable = false
+WaterTreatment1.Size = UDim2.new(0, 116, 0, 31)
+WaterTreatment1.Font = Enum.Font.SourceSans
+WaterTreatment1.Text = "Water Treatment 1"
+WaterTreatment1.TextColor3 = Color3.fromRGB(0, 255, 255)
+WaterTreatment1.TextSize = 14.000
+WaterTreatment1.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-222.22403, 252.169373, 663.116455)
+end)
+
+WaterTreatment2.Name = "Water Treatment 2"
+WaterTreatment2.Parent = Main
+WaterTreatment2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+WaterTreatment2.BorderColor3 = Color3.fromRGB(255, 0, 127)
+WaterTreatment2.Position = UDim2.new(0.754980147, 0, 0.510918498, 0)
+WaterTreatment2.Size = UDim2.new(0, 116, 0, 31)
+WaterTreatment2.Font = Enum.Font.SourceSans
+WaterTreatment2.Text = "Water Treatment 2"
+WaterTreatment2.TextColor3 = Color3.fromRGB(0, 255, 255)
+WaterTreatment2.TextSize = 14.000
+WaterTreatment2.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-73.5239868, 251.556091, 561.229858)
+end)
+
+TPtoExit.Name = "TP to Exit"
+TPtoExit.Parent = Main
+TPtoExit.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TPtoExit.BorderColor3 = Color3.fromRGB(255, 0, 127)
+TPtoExit.Position = UDim2.new(0.384462208, 0, 0.791159034, 0)
+TPtoExit.Size = UDim2.new(0, 116, 0, 31)
+TPtoExit.Font = Enum.Font.SourceSans
+TPtoExit.Text = "TP to Exit"
+TPtoExit.TextColor3 = Color3.fromRGB(0, 255, 255)
+TPtoExit.TextSize = 14.000
+TPtoExit.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://pastebin.com/raw/zh3BmzLr", true))()
+end)
+
+Coins.Name = "Coins"
+Coins.Parent = Main
+Coins.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Coins.BorderColor3 = Color3.fromRGB(255, 0, 127)
+Coins.Position = UDim2.new(0.0697211176, 0, 0.791159034, 0)
+Coins.Size = UDim2.new(0, 116, 0, 31)
+Coins.Font = Enum.Font.SourceSans
+Coins.Text = "Coins"
+Coins.TextColor3 = Color3.fromRGB(0, 255, 255)
+Coins.TextSize = 14.000
+Coins.MouseButton1Down:connect(function()
+for _,_C in pairs(workspace['CurrentMap']['Coins']:GetChildren()) do
+    _C.CanCollide = true
+    local Character = workspace:FindFirstChild(game.Players.LocalPlayer.Name)
+    if not Character then
+        print('Your character does not exist, please try again when you have a character.')
+        else
+        _C.CFrame = Character.HumanoidRootPart.CFrame
+    end
+end
+end)
+
+WillowMarsh1.Name = "Willow Marsh 1"
+WillowMarsh1.Parent = Main
+WillowMarsh1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+WillowMarsh1.BorderColor3 = Color3.fromRGB(255, 0, 127)
+WillowMarsh1.Position = UDim2.new(0.0139442235, 0, 0.649219036, 0)
+WillowMarsh1.Size = UDim2.new(0, 116, 0, 31)
+WillowMarsh1.Font = Enum.Font.SourceSans
+WillowMarsh1.Text = "Willow Marsh 1"
+WillowMarsh1.TextColor3 = Color3.fromRGB(0, 255, 255)
+WillowMarsh1.TextSize = 14.000
+WillowMarsh1.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-811.780334, -11.818429, 759.65155)
+end)
+
+Lobby.Name = "Lobby"
+Lobby.Parent = Main
+Lobby.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Lobby.BorderColor3 = Color3.fromRGB(255, 0, 127)
+Lobby.Position = UDim2.new(0.507968187, 0, 0.649219036, 0)
+Lobby.Size = UDim2.new(0, 116, 0, 31)
+Lobby.Font = Enum.Font.SourceSans
+Lobby.Text = "Lobby"
+Lobby.TextColor3 = Color3.fromRGB(0, 255, 255)
+Lobby.TextSize = 14.000
+Lobby.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-124.286293, 3.34170723, -524.003479)
+end)
+
+WillowMarsh2.Name = "Willow Marsh 2"
+WillowMarsh2.Parent = Main
+WillowMarsh2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+WillowMarsh2.BorderColor3 = Color3.fromRGB(255, 0, 127)
+WillowMarsh2.Position = UDim2.new(0.258964151, 0, 0.649219036, 0)
+WillowMarsh2.Size = UDim2.new(0, 116, 0, 31)
+WillowMarsh2.Font = Enum.Font.SourceSans
+WillowMarsh2.Text = "Willow Marsh 2"
+WillowMarsh2.TextColor3 = Color3.fromRGB(0, 255, 255)
+WillowMarsh2.TextSize = 14.000
+WillowMarsh2.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-436.264465, -12.3130579, 869.586975)
+end)
+
+NoClip.Name = "No Clip"
+NoClip.Parent = Main
+NoClip.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+NoClip.BorderColor3 = Color3.fromRGB(255, 0, 127)
+NoClip.Position = UDim2.new(0.258964151, 0, 0.0996563584, 0)
+NoClip.Size = UDim2.new(0, 116, 0, 31)
+NoClip.Font = Enum.Font.SourceSans
+NoClip.Text = "No Clip"
+NoClip.TextColor3 = Color3.fromRGB(0, 255, 255)
+NoClip.TextSize = 14.000
+NoClip.MouseButton1Down:connect(function()
+Sound22()
+loadstring(game:HttpGet("https://pastebin.com/raw/bwZreMfj", true))()
+end)
+
+Destroy.Name = "Destroy"
+Destroy.Parent = Main
+Destroy.BackgroundColor3 = Color3.fromRGB(255, 0, 127)
+Destroy.BorderColor3 = Color3.fromRGB(0, 255, 255)
+Destroy.BorderSizePixel = 0
+Destroy.Position = UDim2.new(0.952191293, 0, -0.010309279, 0)
+Destroy.Size = UDim2.new(0, 17, 0, 18)
+Destroy.Font = Enum.Font.SourceSans
+Destroy.Text = "X"
+Destroy.TextColor3 = Color3.fromRGB(0, 0, 0)
+Destroy.TextScaled = true
+Destroy.TextSize = 12.000
+Destroy.TextWrapped = true
+Destroy.MouseButton1Down:connect(function()
+Sound33()
+ScreenGui:Destroy()
+end)
+
+Minimize.Name = "Minimize"
+Minimize.Parent = Main
+Minimize.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Minimize.BorderColor3 = Color3.fromRGB(0, 255, 255)
+Minimize.BorderSizePixel = 0
+Minimize.Position = UDim2.new(0.892430305, 0, -0.010309278, 0)
+Minimize.Size = UDim2.new(0, 19, 0, 23)
+Minimize.Font = Enum.Font.SourceSans
+Minimize.Text = "__"
+Minimize.TextColor3 = Color3.fromRGB(255, 0, 127)
+Minimize.TextSize = 12.000
+Minimize.TextWrapped = true
+Minimize.MouseButton1Down:connect(function()
+Sound22()
+OpenFrame.Visible = true
+Main.Visible = false
+end)
+
+InfinityYeildAdminCMDs.Name = "Infinity Yeild Admin CMDs"
+InfinityYeildAdminCMDs.Parent = Main
+InfinityYeildAdminCMDs.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+InfinityYeildAdminCMDs.BorderColor3 = Color3.fromRGB(255, 0, 127)
+InfinityYeildAdminCMDs.Position = UDim2.new(0.699203134, 0, 0.791159034, 0)
+InfinityYeildAdminCMDs.Size = UDim2.new(0, 116, 0, 31)
+InfinityYeildAdminCMDs.Font = Enum.Font.SourceSans
+InfinityYeildAdminCMDs.Text = "Infinity Yeild Admin CMDs"
+InfinityYeildAdminCMDs.TextColor3 = Color3.fromRGB(0, 255, 255)
+InfinityYeildAdminCMDs.TextScaled = true
+InfinityYeildAdminCMDs.TextSize = 14.000
+InfinityYeildAdminCMDs.TextWrapped = true
+InfinityYeildAdminCMDs.MouseButton1Down:connect(function()
+Sound55()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+function Sound22()
+local Song1 = Instance.new("Sound")
+ 
+Song1.Name = "Song1"
+Song1.SoundId = "rbxassetid://421058925"
+Song1.Volume = 2
+Song1.archivable = false
+Song1.Parent = game.Workspace
+Song1:play()
+end
+
+function Sound33()
+local Song2 = Instance.new("Sound")
+ 
+Song2.Name = "Song2"
+Song2.SoundId = "rbxassetid://317671259"
+Song2.Volume = 2
+Song2.archivable = false
+Song2.Parent = game.Workspace
+Song2:play()
+end
+
+function Sound55()
+local Song4 = Instance.new("Sound")
+ 
+Song4.Name = "Song4"
+Song4.SoundId = "rbxassetid://142601170"
+Song4.Volume = 2
+Song4.archivable = false
+Song4.Parent = game.Workspace
+Song4:play()
+end
