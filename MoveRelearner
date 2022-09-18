@@ -1,0 +1,11 @@
+local ToInteract = game:GetService("Workspace")["015_LodgeStation"].NPC.MoveRelearner
+
+local ToInteractTable = nil
+local Client = require(game.Players.LocalPlayer.Packer.Client)
+for i,v in pairs(Client.CurrentNPCs) do
+    if i == ToInteract then
+        ToInteractTable = v
+    end
+end
+
+ToInteractTable.Event()
