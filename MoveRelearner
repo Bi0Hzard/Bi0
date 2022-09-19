@@ -1,4 +1,4 @@
-local ToInteract = game:GetService("Workspace")["015_LodgeStation"].NPC.MoveRelearner
+local ToInteract = game:GetService("Workspace")["SocialPark"].NPC.MoveRelearner
 
 local ToInteractTable = nil
 local Client = require(game.Players.LocalPlayer.Packer.Client)
