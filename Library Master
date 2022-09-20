@@ -320,6 +320,7 @@ function library:CreateWindow(options)
 			BorderSizePixel = 0;
 			LayoutOrder = self.Count;
 			Parent = self.container;
+			overflow:scroll;
 		})
 		
 		local button = library:Create("ImageButton",{
