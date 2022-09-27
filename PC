@@ -6,7 +6,7 @@ OpenPC.Name = "OpenPC"
 OpenPC.AnchorPoint = Vector2.new(1,1)
 OpenPC.Position = UDim2.new(1, 0, 1, -60)
 OpenPC.Size = UDim2.new(0, 50, 0, 50)
-OpenPC.Image = "rbxassetid://2691049013"
+OpenPC.Image = "rbxassetid://11092976806"
 OpenPC.BackgroundTransparency = 1
 OpenPC.Active = false
 OpenPC.MouseEnter:Connect(function()
