@@ -50,6 +50,21 @@ function library:Create(class, props)
 	return object;
 end
 
+local uitoggled = false
+UserInputService.InputBegan:Connect(
+	function(io, p)
+		if io.KeyCode == Enum.KeyCode.RightShift then
+			if uitoggled == false then
+				Library.Enabled = false
+				uitoggled = true
+			else
+				Library.Enabled = true
+				uitoggled = false
+			end
+		end
+	end
+)
+
 function library:CreateWindow(options)
 	assert(options.text, "No Title");
 	local window = {
