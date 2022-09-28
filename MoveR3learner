@@ -1,0 +1,25 @@
+CurrentPC = Client.Party.new({
+			Party = Client.ClientDatabase:PDSFunc("GetParty"), 
+			String = "Which Doodle should relearn a move?", 
+			Picker = true
+        })
+    local result = Client.GlobalSignal:Wait()
+    if result == "None" then
+		Client.Dialogue:SaySimple("Don't waste my time!", false, "Move Relearner");
+		return;
+    end;
+    local Close = game.Players.LocalPlayer.PlayerGui.MainGui.PartyUI.CloseBar.Cancel
+    Close.MouseButton1Click:Connect(function()
+        Client.Menu.DisableBlur()
+        Client.Menu:Enable()
+        Client.Controls:ToggleWalk(true)
+    end)
+    Client.MoveRelearner:Show(result)
+    local result2 = Client.GlobalSignal:Wait();
+	if result2 == "NoMessage" or result2 == "None" then
+		Client.Menu.DisableBlur()
+        Client.Menu:Enable()
+        Client.Controls:ToggleWalk(true)
+        CurrentPC:destroy()
+	end
+end)
