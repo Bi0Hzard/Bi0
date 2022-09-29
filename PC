@@ -1,11 +1,9 @@
---Doodle World PC made By valchampsteel
-local Client = require(game.Players.LocalPlayer.Packer.Client)
 local OpenPC = Instance.new("ImageButton",game.Players.LocalPlayer.PlayerGui.MainGui)
 local CurrentPC
 OpenPC.Name = "OpenPC"
 OpenPC.AnchorPoint = Vector2.new(1,1)
-OpenPC.Position = UDim2.new(1, 0, 1, -60)
-OpenPC.Size = UDim2.new(0, 50, 0, 50)
+OpenPC.Position = UDim2.new(1, -29, 1, -61)
+OpenPC.Size = UDim2.new(0, 25, 0, 25)
 OpenPC.Image = "rbxassetid://10649026745"
 OpenPC.BackgroundTransparency = 1
 OpenPC.Active = false
