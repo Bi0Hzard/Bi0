@@ -1,11 +1,43 @@
-local ToInteract = game:GetService("Workspace")["SocialPark"].NPC.MoveRelearner
+local MRGui = Instance.new("ScreenGui")
+local MoveRelearner = Instance.new("ImageButton")
 
-local ToInteractTable = nil
-local Client = require(game.Players.LocalPlayer.Packer.Client)
-for i,v in pairs(Client.CurrentNPCs) do
-    if i == ToInteract then
-        ToInteractTable = v
-    end
-end
+MRGui.Name = "MRGui"
+MRGui.Parent = game.CoreGui
+MRGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-ToInteractTable.Event()
+MoveRelearner.Name = "MoveRelearner"
+MoveRelearner.Parent = MRGui
+MoveRelearner.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MoveRelearner.BackgroundTransparency = 1.000
+MoveRelearner.Position = UDim2.new(0.98, 0, 0.87, 0)
+MoveRelearner.Size = UDim2.new(0, 25, 0, 25)
+MoveRelearner.Image = "http://www.roblox.com/asset/?id=11108305865"
+MoveRelearner.MouseButton1Down:connect(function()
+    CurrentMR = Client.Party.new({
+			Party = Client.ClientDatabase:PDSFunc("GetParty"), 
+			String = "Which Doodle should relearn a move?", 
+			Picker = true
+        })
+    local result = Client.GlobalSignal:Wait()
+    if result == "None" then
+		--Client.Dialogue:SaySimple("Don't waste my time!", false, "Move Relearner");
+		Client.Menu.DisableBlur()
+        Client.Menu:Enable()
+        Client.Controls:ToggleWalk(true)
+        CurrentMR:destroy()
+		return;
+    end;
+    local Close = Player.PlayerGui.MainGui.PartyUI.CloseBar.Cancel
+    Close.MouseButton1Click:Connect(function()
+        Client.Menu.DisableBlur()
+        Client.Menu:Enable()
+        Client.Controls:ToggleWalk(true)
+    end)
+    Client.MoveRelearner:Show(result)
+    local result2 = Client.GlobalSignal:Wait();
+	--if result2 == "NoMessage" or result2 == "None" then
+		Client.Menu.DisableBlur()
+        Client.Menu:Enable()
+        Client.Controls:ToggleWalk(true)
+        CurrentMR:destroy()
+end)
