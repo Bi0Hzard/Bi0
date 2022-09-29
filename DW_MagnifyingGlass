@@ -1,0 +1,17 @@
+local MGui = Instance.new("ScreenGui")
+local MagnifyingGlass = Instance.new("ImageButton")
+
+MGui.Name = "MGui"
+MGui.Parent = game.CoreGui
+MGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MagnifyingGlass.Name = "MagnifyingGlass"
+MagnifyingGlass.Parent = MGui
+MagnifyingGlass.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MagnifyingGlass.BackgroundTransparency = 1.000
+MagnifyingGlass.Position = UDim2.new(0.959, 0, 0.83, 0)
+MagnifyingGlass.Size = UDim2.new(0, 25, 0, 25)
+MagnifyingGlass.Image = "rbxassetid://9137034166"
+MagnifyingGlass.MouseButton1Down:connect(function()
+game.Players.LocalPlayer.PlayerGui.MainGui.MainBattle.BottomBar.MagnifyingGlass.Visible = true
+end)
