@@ -1,0 +1,24 @@
+local ShopGui = Instance.new("ScreenGui")
+local Shop = Instance.new("ImageButton")
+
+ShopGui.Name = "ShopGui"
+ShopGui.Parent = game.CoreGui
+ShopGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Shop.Name = "Shop"
+Shop.Parent = ShopGui
+Shop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Shop.BackgroundTransparency = 1.000
+Shop.Position = UDim2.new(0.98, 0, 0.83, 0)
+Shop.Size = UDim2.new(0, 25, 0, 25)
+Shop.Image = "http://www.roblox.com/asset/?id=11108505392"
+Shop.MouseButton1Down:connect(function()
+    local CurrentShop
+    CurrentShop = Client.NormalShop.new()
+    Client.ShopClosed:Wait()
+    Client.Menu.DisableBlur()
+    Client.Menu:Enable()
+    Client.Controls:ToggleWalk(true)
+    CurrentShop.NormalShop.Visible = false
+    CurrentShop:Destroy()
+end)
