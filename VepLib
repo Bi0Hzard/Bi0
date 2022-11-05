@@ -334,7 +334,7 @@ function VLib:Window(textgame)
 			Button.Name = "Button"
 			Button.Parent = Container
 			Button.BackgroundColor3 = Color3.fromRGB(32, 33, 37)
-			Button.Size = UDim2.new(0, 370, 0, 20)
+			Button.Size = UDim2.new(0, 403, 0, 20)
 			Button.AutoButtonColor = false
 			Button.Font = Enum.Font.Gotham
 			Button.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -392,7 +392,7 @@ function VLib:Window(textgame)
 			Toggle.Parent = Container
 			Toggle.BackgroundColor3 = Color3.fromRGB(32, 33, 37)
 			Toggle.Position = UDim2.new(-0.747557044, 0, 0.729113936, 0)
-			Toggle.Size = UDim2.new(0, 370, 0, 28)
+			Toggle.Size = UDim2.new(0, 403, 0, 28)
 			Toggle.AutoButtonColor = false
 			Toggle.Font = Enum.Font.Gotham
 			Toggle.Text = ""
@@ -637,7 +637,7 @@ function VLib:Window(textgame)
 			Dropdown.Parent = Container
 			Dropdown.BackgroundColor3 = Color3.fromRGB(32, 33, 37)
 			Dropdown.Position = UDim2.new(-0.747557044, 0, 0.729113936, 0)
-			Dropdown.Size = UDim2.new(0, 370, 0, 28)
+			Dropdown.Size = UDim2.new(0, 403, 0, 28)
 			Dropdown.AutoButtonColor = false
 			Dropdown.Font = Enum.Font.Gotham
 			Dropdown.Text = ""
