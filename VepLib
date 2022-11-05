@@ -334,7 +334,7 @@ function VLib:Window(textgame)
 			Button.Name = "Button"
 			Button.Parent = Container
 			Button.BackgroundColor3 = Color3.fromRGB(32, 33, 37)
-			Button.Size = UDim2.new(0, 403, 0, 28)
+			Button.Size = UDim2.new(0, 370, 0, 20)
 			Button.AutoButtonColor = false
 			Button.Font = Enum.Font.Gotham
 			Button.TextColor3 = Color3.fromRGB(255, 255, 255)
