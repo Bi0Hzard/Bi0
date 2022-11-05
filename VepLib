@@ -177,7 +177,7 @@ function VLib:Window(textgame)
 	CircleName.BackgroundTransparency = 1.000
 	CircleName.Size = UDim2.new(0, 38, 0, 37)
 	CircleName.Font = Enum.Font.Gotham
-	CircleName.Text = "V"
+	CircleName.Text = "A"
 	CircleName.TextColor3 = Color3.fromRGB(255, 255, 255)
 	CircleName.TextSize = 16.000
 
@@ -279,7 +279,7 @@ function VLib:Window(textgame)
 		Container.BorderSizePixel = 0
 		Container.Position = UDim2.new(0.322475582, 0, 0.0506329127, 0)
 		Container.Size = UDim2.new(0, 411, 0, 359)
-		Container.ScrollBarThickness = 3
+		Container.ScrollBarThickness = 12
 		Container.CanvasSize = UDim2.new(0, 0, 0, 0)
 		Container.Visible = false
 		Container.ScrollBarImageColor3 = Color3.fromRGB(42, 44, 50)
@@ -693,7 +693,7 @@ function VLib:Window(textgame)
 			DropdownHolder.BorderSizePixel = 0
 			DropdownHolder.Position = UDim2.new(0.0263156947, 0, 0.00326599111, 0)
 			DropdownHolder.Size = UDim2.new(0, 386, 0, 0)
-			DropdownHolder.ScrollBarThickness = 3
+			DropdownHolder.ScrollBarThickness = 12
 			DropdownHolder.CanvasSize = UDim2.new(0, 0, 0, 0)
 			DropdownHolder.ScrollBarImageColor3 = Color3.fromRGB(48, 50, 56)
 
