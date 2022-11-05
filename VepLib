@@ -133,7 +133,7 @@ function VLib:Window(textgame)
 	MainFrame.Parent = Library
 	MainFrame.BackgroundColor3 = Color3.fromRGB(22, 23, 27)
 	MainFrame.Position = UDim2.new(0.340104192, 0, 0.297149122, 0)
-	MainFrame.Size = UDim2.new(0, 614, 0, 395)
+	MainFrame.Size = UDim2.new(0, 500, 0, 395)
 
 	MainCorner.CornerRadius = UDim.new(0, 7)
 	MainCorner.Name = "MainCorner"
@@ -278,7 +278,7 @@ function VLib:Window(textgame)
 		Container.BackgroundTransparency = 1.000
 		Container.BorderSizePixel = 0
 		Container.Position = UDim2.new(0.322475582, 0, 0.0506329127, 0)
-		Container.Size = UDim2.new(0, 378, 0, 359)
+		Container.Size = UDim2.new(0, 411, 0, 359)
 		Container.ScrollBarThickness = 5
 		Container.CanvasSize = UDim2.new(0, 0, 0, 0)
 		Container.Visible = false
