@@ -279,7 +279,7 @@ function VLib:Window(textgame)
 		Container.BorderSizePixel = 0
 		Container.Position = UDim2.new(0.322475582, 0, 0.0506329127, 0)
 		Container.Size = UDim2.new(0, 411, 0, 359)
-		Container.ScrollBarThickness = 7
+		Container.ScrollBarThickness = 5
 		Container.CanvasSize = UDim2.new(0, 0, 0, 0)
 		Container.Visible = false
 		Container.ScrollBarImageColor3 = Color3.fromRGB(42, 44, 50)
