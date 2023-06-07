@@ -85,7 +85,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	local abc = false
 	local logo = logo or 0
 	local currentpage = ""
-	local keybind = keybind or Enum.KeyCode.RightShift
+	local keybind = keybind or Enum.KeyCode.RightControl
 	local yoo = string.gsub(tostring(keybind),"Enum.KeyCode.","")
 	if gamename == "" then 
 	    gamename = ""..PlaceName.Name
@@ -186,7 +186,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	ScrollTab.BackgroundTransparency = 1.000
 	ScrollTab.Size = UDim2.new(0, 150, 0, 365)
 	ScrollTab.CanvasSize = UDim2.new(0, 0, 0, 0)
-	ScrollTab.ScrollBarThickness = 0
+	ScrollTab.ScrollBarThickness = 6
 
 	local PLL = Instance.new("UIListLayout")
 	PLL.Name = "PLL"
@@ -275,7 +275,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 		MainFramePage.BorderSizePixel = 0
 		MainFramePage.Size = UDim2.new(0, 490, 0, 365)
 		MainFramePage.CanvasSize = UDim2.new(0, 0, 0, 0)
-		MainFramePage.ScrollBarThickness = 0
+		MainFramePage.ScrollBarThickness = 3
 		
 		local UIPadding = Instance.new("UIPadding")
 		local UIListLayout = Instance.new("UIListLayout")
@@ -538,7 +538,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			DropScroll.Position = UDim2.new(0, 0, 0, 31)
 			DropScroll.Size = UDim2.new(0, 470, 0, 100)
 			DropScroll.CanvasSize = UDim2.new(0, 0, 0, 0)
-			DropScroll.ScrollBarThickness = 3
+			DropScroll.ScrollBarThickness = 5
 			
 			UIListLayout.Parent = DropScroll
 			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
