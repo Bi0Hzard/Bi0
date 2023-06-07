@@ -186,7 +186,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	ScrollTab.BackgroundTransparency = 1.000
 	ScrollTab.Size = UDim2.new(0, 150, 0, 365)
 	ScrollTab.CanvasSize = UDim2.new(0, 0, 0, 0)
-	ScrollTab.ScrollBarThickness = 6
+	ScrollTab.ScrollBarThickness = 8
 
 	local PLL = Instance.new("UIListLayout")
 	PLL.Name = "PLL"
@@ -275,7 +275,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 		MainFramePage.BorderSizePixel = 0
 		MainFramePage.Size = UDim2.new(0, 490, 0, 365)
 		MainFramePage.CanvasSize = UDim2.new(0, 0, 0, 0)
-		MainFramePage.ScrollBarThickness = 3
+		MainFramePage.ScrollBarThickness = 6
 		
 		local UIPadding = Instance.new("UIPadding")
 		local UIListLayout = Instance.new("UIListLayout")
@@ -538,7 +538,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 			DropScroll.Position = UDim2.new(0, 0, 0, 31)
 			DropScroll.Size = UDim2.new(0, 470, 0, 100)
 			DropScroll.CanvasSize = UDim2.new(0, 0, 0, 0)
-			DropScroll.ScrollBarThickness = 5
+			DropScroll.ScrollBarThickness = 8
 			
 			UIListLayout.Parent = DropScroll
 			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
