@@ -186,7 +186,7 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	ScrollTab.BackgroundTransparency = 1.000
 	ScrollTab.Size = UDim2.new(0, 150, 0, 365)
 	ScrollTab.CanvasSize = UDim2.new(0, 0, 0, 0)
-	ScrollTab.ScrollBarThickness = 8
+	ScrollTab.ScrollBarThickness = 6
 
 	local PLL = Instance.new("UIListLayout")
 	PLL.Name = "PLL"
