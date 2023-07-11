@@ -1,0 +1,39 @@
+local Players = game:GetService("Players")
+Player = Players.LocalPlayer
+if Player == nil then
+Players:GetPropertyChangedSignal("LocalPlayer"):Wait()
+Player = Players.LocalPlayer
+end
+local Packer = Player:WaitForChild("Packer")
+local Client = require(Packer:WaitForChild("Client"))
+getgenv().questNumber = nil 
+
+print("-------Henlo!---------")
+
+
+local v1,v2 = Client.ClientDatabase:PDSFunc("GetSummerQuest")
+
+if v2["1"]["QT"] == "3" then getgenv().questNumber = "1" end 
+if v2["2"]["QT"] == "3" then getgenv().questNumber = "2" end
+if v2["3"]["QT"] == "3" then getgenv().questNumber = "3" end
+if questNumber == nil then 
+    getgenv().questNumber = tostring(math.random(1,3)) 
+    getgenv().takeQuest = false
+else
+    getgenv().takeQuest = true 
+end 
+
+Client.ClientDatabase:PDSFunc("TakeSummerQuest",questNumber)
+
+if takeQuest then 
+    print("Found Quest, claiming!")
+    Client.ClientDatabase:PDSFunc("USQ",2)
+else
+    print("Did not find Quest, forfeiting...")
+    Client.ClientDatabase:PDSFunc("ForfeitSummerQuest")
+end
+
+task.wait(1)
+local v1= Client.ClientDatabase:PDSFunc("GetProgression",true)
+task.wait(1)
+local x1= Client.ClientDatabase:PDSFunc("GetCurrentLeads")
